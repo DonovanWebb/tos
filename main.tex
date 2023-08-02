@@ -1,5 +1,6 @@
 \begin{document}
 
+%Plan {{{ 
 % Title
 Make sure that I only talk about areas I am really interested in and want to talk about. 
 
@@ -83,11 +84,13 @@ Outlook: ~ 1 page
                 Theory on this
 
 What will my next 6 months, 1 yr, 2 yrs look like? 
+%}}}
 
-
-
+%Abstract {{{
 Abstract
+%}}}
 
+%Introduction {{{
 Introduction
 Previously the physicist was limited to thought experiments on the
 nature of highly coherent quantum effects. It was even thought to be
@@ -109,48 +112,97 @@ platform for enabling Quantum Computation.
     *Non-Adiabatic interactions
     *Fast Gate Schemes
 
+%}}}
+
+%Experimental Details {{{
 Experimental Details
 
-Description of Blade and limitations
-Proof of principle experiments have been completed on Blade, a blade-style ion trap. Blade has a few limitations for the exploration of fast gates by the above described Cnulled method, motivating the design of a new system.
-Blade has dual optical access of the ions however, only as 45 degrees to the chain axial direction. Only global laser addressing of the chain is possible limiting the intensity seen at the ion. The simpler blade style trap, has limited control over creation of electric potentials meaning shuttling of ions is not practical.
+
+\subtitle{Ion Trapping Apparatus}
+
+
+The technical complexity of ion trapping experiments may be reduced to
+solving two problems: Controlling the state of the ion (both internal
+and motional); and controlling the environment the ion is within.
+Our Ion trap experiments consist of: an atomic source, a trap, a
+vacuum system encasing these, external magnetic field coils, and
+lasers for ionization, cooling, repumping, stateprep, coherent
+control and readout.
+As with all ventures in experimental physics, as technologies mature, so
+too do the capabilities and scope of our apparatus.  Here we shall
+describe the ``Old'' apparatus, known in short as ``Blade'', where
+proof of principle fast gate schemes have been tested. The limitations
+of ``Blade'' for further fast gate work will be made apparant and
+the new proposed system, known as ``FastGates'', will be described. 
+
+\subtitle{Ion and Trap}
+
+As mentioned, the overall system we desire is a spin coupled to a spring. Our spin in this case being a Hydrogen-like ion, and the spring being the harmonic motion of the ions within the trapping potential. FigureX shows a schematic of a linear Paul trap, which we use to create the harmonic trapping potential required. There are various methods of realizing a paul trap, here we describe: A macro 3D Blade trap; a surface trap; and a microfabricated multilayer trap. 
+The ``Blade'' apparatus is named such due to its use of the Blade style trap, which can be seen in FigureX. The 
+
+Assuming our trapping potential to be quadratic, we have a spin system coupled to a spring. The Jaynes Cummings Hamiltonian,
+$$ H = H_{spin} + H_{HO} + H_{Int}, $$
+summarises this coupled system.
+
+
+
+
+Ion source,
+Trap,
+Laser addressing
+
+second problem
+
+Our Ion trapping experiments require control over the ion, the trap
+Require:
+Ion, Trap
+Control over:
+Internal state of ion, external environment of the ion
+
+In a reductionist viewpoint, 
+Description of Blade and limitations Proof of principle experiments
+have been completed on Blade, a blade-style ion trap. Blade has a few
+limitations for the exploration of fast gates by the above described
+Cnulled method, motivating the design of a new system.  Blade has dual
+optical access of the ions however, only as 45 degrees to the chain
+axial direction. Only global laser addressing of the chain is possible
+limiting the intensity seen at the ion. The simpler blade style trap,
+has limited control over creation of electric potentials meaning
+shuttling of ions is not practical.
+
+
+\subtitle{FastGates Apparatus}
 
 Here we describe the design of the new ``FastGates'' system which is
 tailored for the exploration of fast, non-adiabatic entangling
 gates. Figure X shows a schematic of the vacuum can of ``FastGates''
-with the addressing directions and magnetic field highlighted. Ca40 was chosen for
-initial experiments due to its simple energy level structure, figure
-X, without hyperfine levels and with the option for a quadrupole qubit
-between the S and D levels. An external magnetic field of 5G is applied to define our Zeeman sublevels, this low field will not allow state selective addressing by frequency, however allows for polarization selective addressing. *** Check if 729 will actually have linewidth for frequency addressing? ***
-The isotope having 0 nuclear spin and
-hence no hyperfine levels greatly simplifies control schemes however
-precludes the option of using magnetically insensitive ``clock''
-qubits. To ensure we do not greatly limit coherence time of our
-quadrupole transition we use a MuMetal enclosure to suppress stray environmental magnetic fields.
+with the addressing directions and magnetic field highlighted. Ca40
+was chosen for initial experiments due to its simple energy level
+structure, figure X, without hyperfine levels and with the option for
+a quadrupole qubit between the S and D levels. An external magnetic
+field of 5G is applied to define our Zeeman sublevels, this low field
+will not allow state selective addressing by frequency, however allows
+for polarization selective addressing. *** Check if 729 will actually
+have linewidth for frequency addressing? *** The isotope having 0
+nuclear spin and hence no hyperfine levels greatly simplifies control
+schemes however precludes the option of using magnetically insensitive
+``clock'' qubits. To ensure we do not greatly limit coherence time of
+our quadrupole transition we use a MuMetal enclosure to suppress stray
+environmental magnetic fields.
 
-    Design of FG system
-        *Figure of experimental apparatus
-        Figure of Control systems?
-        *Ca40 energy diagram
-        *Laser systems used for addressing 
-        *Dual Optical Access High NA system
-        *Single Ion Addressing with AOD, power requirements
-        NPL trap, trap frequencies, substrate bias for crystal rotation
-        Vacuum system
-        729 system design, PDH locking, FNC
 
-    Proof of principle of fast entangling on Blade
-        *Pulse sequence for MS
-        *Phase control
-        *RBM work
+%}}}
 
+%Results and Discussion {{{
 Results and Discussion
     *Carrier nulling on Blade
+%}}}
 
-
+%Outlook {{{
 Outlook
     Current state of building up apparatus
     Proposed first experiments?
 
+%}}}
   
 \end{document}

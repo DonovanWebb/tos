@@ -173,7 +173,7 @@ creates a poor approx of harmonic potential... Therefore weak trap and
 high heating rates compared to a macro 3D blade trap. Heating rates of
 HOA2: axial and radial frequencies...
 
-A microfab 3D trap [See et al], as will be used in the ``FastGates''
+A microfab 3D trap [See et al and Wilpers 2012], as will be used in the ``FastGates''
 apparatus, brings together the advantages of chip fabrication as well
 as the low heating rates and high trapping fields of a 3D style
 trap. This is achieved by a multilayer chip as shown in figureX. The
@@ -189,17 +189,135 @@ NA optical access (NA = XX), which is an important factor for our
 proposed single addressing standing wave experiment.
 
 \subtitle{Laser systems}
-We have described the trapping of an ion, now we must look at our strategies for manipulating the ions internal states and the collective motion of ion strings. Our key tool for this is the use of lasers...
-Figure X shows the energy level structure of Ca40+ and the transition frequencies we require for our experiment.
+We have described the trapping of an ion, now we must look at our
+strategies for manipulating the internal states and collective motion
+of ion strings. Our key tool for this is the use of lasers as we can
+create highly localised, strong electric field amplitudes and
+gradients. Coupling to spin: carrier interaction, Rabi flopping, pi
+pulses. Coupling to motion: description of sidebands.
+Figure X shows the energy level structure of Ca40+, note the plethora
+of available transitions available to realize the control over our ion
+strings. Here we describe what transitions we have chosen for what
+task.
+Figure X shows the entry points of the laser systems into the trap
+chamber.
+
+729 - Coherent control
+We will use the optical S->D state with the 729 quadrupole transition
+to define our qubit due to the D state being a metastable state:
+i.e. the transition from D to S is dipole forbidden as they are the
+same parity DelL != +-1. The lifetime of this state is ~X700 ms,
+giving a greater upper bound of the qubit coherence time than if a
+dipole transition is used. This long lived state means that it is a
+narrow linewidth transition (Heisenberg uncertainty) and so we must
+use a narrow linewidth laser to efficiently control.  High power
+required as lamb dicke factor is low for 729 transition.  We use a
+pumped Ti:Saph system coupled to a high finesse cavity to achieve
+this.  Verdi 532 -> Solstis 729 PDH locking with Stable laser systems
+lock box. Below a schematic of our 729 laser system is
+shown. Strontium is used in Blade apparatus and has all analogous
+transitions. Here our quadrupole transition is at 674 nm.  FNC to
+cavity and to laser lab. Power stabilization on the feedback AOM. High
+bandwidth PID feedback loop pushing the servo bump away from area of
+experimental interest. Acoustic isolation using foam insulated box.
+Trial of Verdi C unsuccesful so far not achieving stable lasing with
+solstis.
+Improvements over Blade:
+- 729 more convenient Ti:Saph freq -> Higher power, low noise
+- access parallel to radial mode, Blade is 45 deg -> High Lamb Dicke
+factor
+- 729 more convenient for putting in fibre -> low charging
+
 
 393 and 432 - PI 
-397 - Cooling, readout
-729 Quadrupole - Coherent control
-854 and 866 - Repumping
+Two step photoionization for isotope selectivity.
+
+397 - Doppler Cooling, Fluorescent readout
+Dipole transition for Doppler cooling as want fast scattering. Also
+want higher freq light for more momentum transfer.
+Fluor read out so that |0> bright and |1> dark.
+
+854 and 866 - Repumping as branching ratio from P to S and D. So
+during cooling and readout we lose population to these levels.
+
+All of the above systems are Toptica Diode lasers coupled to a cavity
+for PDH locking.
+
 
 \subtitle{The vacuum system}
 
-Here we shall describe the instrumentation required, and being constructed, for decouping the ion from any unwanted external environments. Our primary tools for this are working under Ultra High Vacuum (UHV), and using electro magenetic shielding. The UHV system consists of a main experimental chamber comprised of a CF100 Octagon and pumps
+Here we shall describe the instrumentation required, and being
+constructed, for decouping the ion from any unwanted external
+environments. Our primary tools for this are working under Ultra High
+Vacuum (UHV) < $10^{-11}$ mbar, and using electro magenetic
+shielding. The UHV system consists of a main experimental chamber
+comprised of a CF100 Octagon and pumps. For UHV, we use protocols
+described in XXX and must use appropriate materials within the
+chamber. Note, as mentioned the NPL trap is a microfab 3D trap, our
+ion therefore is located between the two planes within a slit. the 729
+system requires High optical access for single addressing (see below)
+and this limits the available entry points of the remaining beams. We
+therefore are using in vacuum prisms to bounce the light into the
+slit. We must use vacuum compatible glues and coatings of the
+prisms. Figure X shows an image in the cleanroom of the prisms in our
+system.
+Also in the system:
+Oven with thermocouple.
+Trap PCB with filter capacitors.
+Cabling to both.
+Interposer between trap and PCB, using fuzz buttons.
+Now pump system:
+attached ion pump,
+Ti:Sublimation pump,
+Ion Gauge
+Valve to connect to external pump system
+
+MuMetal shielding to suppress external magnetic fields. Using XX3mm
+thick two layer system with a quoted magnetic field reduction of 100.
+
+
+\subtitle{Single Addressing}
+
+729 High NA (0.6) lens we can achieve waist radius of < 1 um.  With
+our axial trap freq of XXX we get ion spacing of ~ 5um.  Using AOD
+system we can traverse this ion chain.  Description of lens system
+from AOD to ions.
+Description on the mechanism on how AOD works (this is the same as an
+AOM). Comparison between this and a fixed waveguide array. What
+equations we need to find number of resolvable spots of the AOD
+system. AOD have extra programmable control than waveguides which is
+excellent as we are in an exploratory regime where we may want to
+alter ion spacing/Dont want to use quartic potentials to make ions
+evenly spaced.
+We will use a crossed AOD design so that we have no overall frequency
+shift as we scan along the ion chain.
+Compact design to fit beam path within MuMetal box.
+We want to create single addressing standing wave so must consider
+stabilization technique from AOD. 
+There is minimal path length differece compared to waveguide which is
+ideal as we can stabilise at some central frequency and should be
+stable at all ion locations.
+Quick calculation to look at path length diff in wavlengths between
+two extrema points on the ion chain. Note that this will give some
+fixed relationship between the two beams if we assume that the small
+seperation of beams paths is negligible (air density and current in
+close proximity should be related).
+Using two RF freq so that we can address two ions at the same
+time. Initially looking at this we see that supplying two freqs and
+amplifying we dont have crazy cross term amplitudes.
+However addressing multiple ions at the same time comes at the cost of
+photon freq cross terms i.e. spots that we dont want that are off
+plane to our ions. This has two bad effects: Can get crosstalk to
+other ions on the chain and lose power in our 729 system. First effect
+we can mitigate by putting AOD at a > 45 deg angle (60 deg?) this
+pushes the unwanted spots further from the chain. (sep to ion is
+sqrt2/2 when at 45 deg). There is no easy way to mitigate the power
+loss as two freq photons are barely distinguishable (maybe look again
+at the two wavelength design aods). So this may limit us to only
+addressing 2 or three ions at a time and using a global addressing
+system through the prisms if all ions need to be addressed. Quick
+power calculation though means we still have XXmW at each ion with an
+intensity of XX which could drive CNulled gates at a speed of X.
 
 
 
@@ -213,17 +331,7 @@ Here we shall describe the instrumentation required, and being constructed, for 
 
 
 
-Ion source,
-Trap,
-Laser addressing
 
-second problem
-
-Our Ion trapping experiments require control over the ion, the trap
-Require:
-Ion, Trap
-Control over:
-Internal state of ion, external environment of the ion
 
 In a reductionist viewpoint, 
 Description of Blade and limitations Proof of principle experiments

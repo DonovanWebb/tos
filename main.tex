@@ -137,12 +137,78 @@ the new proposed system, known as ``FastGates'', will be described.
 
 \subtitle{Ion and Trap}
 
-As mentioned, the overall system we desire is a spin coupled to a spring. Our spin in this case being a Hydrogen-like ion, and the spring being the harmonic motion of the ions within the trapping potential. FigureX shows a schematic of a linear Paul trap, which we use to create the harmonic trapping potential required. There are various methods of realizing a paul trap, here we describe: A macro 3D Blade trap; a surface trap; and a microfabricated multilayer trap. 
-The ``Blade'' apparatus is named such due to its use of the Blade style trap, which can be seen in FigureX. The 
+As mentioned, the overall system we desire is a spin coupled to a
+spring. Our spin in this case being a Hydrogen-like ion, and the
+spring being the harmonic motion of the ions within the trapping
+potential. The ion traps we use to creeate such a potential are linear
+Paul traps, a schematic of such is shown in FigureX. As explained by
+Earnshaw's theorem, a stable stationary point in 3D can not be
+realized using static electric field. Therefore a Paul trap utilizes
+an oscillating electric field to create a trapping
+pseudopotential. There are various geometries for realizing a paul
+trap, shown in Figure X are: A macro 3D Blade trap; a surface trap;
+and a microfabricated multilayer trap.  A Blade trap, as is used in
+the ``Blade'' apparatus, has axial confinement created by DC end caps
+and radial confinement by supplying an oscillating RF on the blades.
+In ``Blade'' the ion endcap distance is $1.15$~mm, and ion-blade
+distance is $0.5$~mm. Typical operating frequency for the RF
+electrodes of the ``Blade'' trap are $28.0133$ MHz leading to an axial
+ion frequency of $1.860$ MHz and radial frequencies of $4.077$ MHz and
+$4.341$ MHz.
 
-Assuming our trapping potential to be quadratic, we have a spin system coupled to a spring. The Jaynes Cummings Hamiltonian,
-$$ H = H_{spin} + H_{HO} + H_{Int}, $$
-summarises this coupled system.
+For the sake of comparison, recently the surface style linear Paul
+trap has gained popularity due to the maturity of chip fabrication
+technologies and the potential route to scalability this offers. In
+the surface trap, the 3D blade and endcap geometry of the ``macro''
+trap is effectively projected onto a 2D surface. The stable point of
+such a trap is typically on the order of $50$ um from the chip
+surface. The ease of fabrication of surface traps has allowed the
+creation of complicated multizone devices with many DC electrodes.
+These multizone traps enable the shuttling of ions, a requirement for
+Quantum CCD type architectures. However these benefits come at the
+cost of trapping potential. Heating of an ion is XXproportionalXX to
+the ion electrode distance, however so too is the trapping
+potential. This leads to a compromise of distance... surface trap
+creates a poor approx of harmonic potential... Therefore weak trap and
+high heating rates compared to a macro 3D blade trap. Heating rates of
+HOA2: axial and radial frequencies...
+
+A microfab 3D trap [See et al], as will be used in the ``FastGates''
+apparatus, brings together the advantages of chip fabrication as well
+as the low heating rates and high trapping fields of a 3D style
+trap. This is achieved by a multilayer chip as shown in figureX. The
+radial trapping is provided by RF rails on opposite diagonals of the
+slit whilst axial trapping may be realized by DC electrodes on both
+surfaces. The Ion electrode distance is now of the order $200$ um,
+meaning lower heating, whilst the more optimal 3D geometry allows for
+a deep potential at this distance. The microfabrication techniques
+also allow a segmented design suitable for multizone operations and
+ion shuttling. Heating rates... and calculate axial and radial modes!
+Further, the ion being located within this slit allows for dual high
+NA optical access (NA = XX), which is an important factor for our
+proposed single addressing standing wave experiment.
+
+\subtitle{Laser systems}
+We have described the trapping of an ion, now we must look at our strategies for manipulating the ions internal states and the collective motion of ion strings. Our key tool for this is the use of lasers...
+Figure X shows the energy level structure of Ca40+ and the transition frequencies we require for our experiment.
+
+393 and 432 - PI 
+397 - Cooling, readout
+729 Quadrupole - Coherent control
+854 and 866 - Repumping
+
+\subtitle{The vacuum system}
+
+Here we shall describe the instrumentation required, and being constructed, for decouping the ion from any unwanted external environments. Our primary tools for this are working under Ultra High Vacuum (UHV), and using electro magenetic shielding. The UHV system consists of a main experimental chamber comprised of a CF100 Octagon and pumps
+
+
+
+
+
+%% Assuming our trapping potential to be quadratic, we have a spin system
+%% coupled to a spring. The Jaynes Cummings Hamiltonian,
+%% $$ H = H_{spin} + H_{HO} + H_{Int}, $$
+%% summarises this coupled system.
 
 
 

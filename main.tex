@@ -33,8 +33,6 @@ Experimental results from Carrier Nulling (excerpts from paper): ~ 2+ pages
 
     * Proof of principle on Blade apparatus ~ 2 paragraph (statement of results) 2 figures
 
-    Could dependence on AC shift with position/field intensity be an issue? ~ 1 paragraph
-
     RBM work ~ few sentences
 
  
@@ -115,11 +113,235 @@ platform for enabling Quantum Computation.
 
 %}}}
 
+%Results and Discussion {{{
+\textbf{Results and Discussion}\\
+
+    Excerpts from carrier nulling paper kind of want to put this after the FG description... Or could I shorten this massively to reduce emphasis?\\
+
+    ******************  Move to intro  ************************\\
+    Controlled light-matter interactions are essential for quantum
+    computing [1–3], quantum simulation [4, 5], and metrology [6,
+      7]\\
+
+    For trapped ions, controlled light-matter interactions typically require
+    carrier interactions that only couple the internal qubit states,
+    as well as sideband interactions that couple these internal states
+    to their collective motion [3]. For example, the sideband
+    interactions, driven by the spatial gradient of the carrier
+    coupling, are used to mediate spin-spin interactions such as
+    entangling gates [8]. Conventionally, coherent control of
+    laser-ion interactions is achieved using traveling waves (TWs)
+    [3]. As the ions experience an averaged electric field and
+    gradient over the interaction duration, the ratio between carrier
+    coupling and sideband coupling is fixed. In contrast, the coupling
+    strengths for ions in a standing wave (SW) vary with the spatial
+    structure of the light field along the propagation
+    direction. Consequently, the phase of the SW at the ions sets the
+    ratio between the carrier and the sideband coupling. Coherent SW
+    interactions on a single ion have been studied previously using
+    cavities [9, 10], integrated optics [11] and free-space approaches
+    [12]. However, coherent operations on multiple ions with a SW have
+    so far been unexplored.\\
+
+    The tunability of the carrier:sideband coupling ratio is especially
+    important for strong interactions where off-resonant terms start
+    participating significantly and cannot be eliminated
+    adiabatically. For example, in the conventional Mølmer Sørensen (MS)
+    mechanism [13], the TW that generates the spin-motion coupling also
+    gives rise to an off-resonant carrier coupling, which causes an error
+    in the entangling operation. This error becomes significant as the
+    carrier interaction strength approaches the motional frequency,
+    placing a limit on the speed of the entangling operation. Using a SW
+    instead enables high-fidelity entangling operations that can surpass
+    this speed limit by selectively enhancing the spin-motion coupling
+    while coherently suppressing the detrimental carrier term [14].\\
+    ***********************************************************\\
+    
+    As discussed in sectionXX, the use of phase-stable standing waves (SW) is a clear route to fast entangling gates on quadrupole transition qubits. 
+    Here we report experimental results of both SW single qubit gates and SW Molmer Sorensen (MS) entangling gates performed on the Blade apparatus.\\
+
+    We use a free-space, phase-stabilized SW formed by two
+    superimposed counter-propagating 674-nm beams that couple to the
+    quadrupole qubit transition, 5S1/2 ↔ 4D5/2, in 88Sr+.\\
+
+    **Here quadrupole so gradient couples carrier whilst XXCurlXX couples the sideband interaction\\.
+
+    The single-qubit gate is created using a monochromatic SW on
+    resonance with the qubit transition while placing the node(s) of
+    the SW at the position of the ion(s). The two-qubit entangling gate
+    is implemented via an MS-type scheme where we use a bichromatic SW
+    instead of the conventional bichromatic TW. We show that the
+    presence of the carrier coupling term, in the context of the TW-MS
+    gate, leads to a reduction in the spin-dependent force (SDF)
+    magnitude, which scales with the Rabi frequency of this detrimental
+    term, posing an inherent speed limit for this mechanism. Using the
+    SW-MS instead, with the anti-nodes placed at the ions, we strongly
+    suppress the undesired carrier term and show that we can surpass
+    this speed limit.\\
+
+    * Could shift these derivations to the intro. \\
+    First derivation of equation 1 of paper. \\
+    By setting δ = 0 or δ = ±ωz, we can bring the carrier or sidebands
+    into resonance, respectively. With ∆φ the SW has an additional
+    degree of freedom compared to the TW: by setting 2 ∆φ = 0 we can
+    drive the first sidebands while suppressing all even terms in the
+    Lamb-Dicke expansion [26], including the carrier term. Conversely,
+    if we set ∆φ = π we drive the carrier coupling and suppress all
+    odd terms in the Lamb-Dicke expansion, including the first
+    sidebands. \\
+
+    The MS interaction requires two tones symmetrically detuned about the
+    qubit resonance by δ ≈ ±ωz. To construct the Hamiltonian for a SW-MS
+    interaction, we combine two monochromatic SWs as described by Eq. (1),
+    resulting in the bichromatic SW interaction\\
+    Equation 2 from paper\\
+
+    where the phase ̃ φ =( ̃ φBD + ̃ φRD)/2 is now the mean optical phase
+    between the blue- (BD) and the red- (RD) detuned SWs. Further, we
+    assume that the BD and RD SWs are in phase at the position of the
+    ion(s), i.e. ∆φBD = ∆φRD = ∆φ . The first term corresponds to a
+    spin-dependent force (SDF) and the second term drives the carrier
+    transition off-resonantly. Notably, these terms commute. Similar to
+    the monochromatic SW, we can drive the motional coupling while
+    suppressing the spurious carrier coupling by setting ∆φ = 0.\\
+
+    It can be shown that a travelling wave MS in the interaction picture obeys
+    equation 4 of paper, where the SDF follows a bessel like
+    relationship as shown in fig X, featuring a global maximum
+    achievable force amplitude. This maximum point direclty limits the
+    speed at which gates can be achieved.\\
+
+    **Look at poster for description of phase feedback onto the ion -
+    maybe exclude this to shorten section.\\
+
+    still to tidy Results: \\
+    We probe the position of the SW relative to a single ion by applying a
+    monochromatic SW pulse on resonance with the qubit transition
+    [Figs. 1(b), 2(a)]. The pulse duration corresponds to a π-pulse at
+    maximum carrier coupling, which occurs at the nodes of the SW. For an
+    electric quadrupole transition, the maximum carrier coupling occurs at
+    the maximum gradient of the electric field [9]. We can maximize the
+    carrier coupling and minimize the sideband coupling, or vice versa, by
+    selecting ∆φ = π or ∆φ = 0 [Fig. 2(b)]. The transfer probability shown
+    in Fig. 2(a) has a quartic dependence on ∆φ near ∆φ = π and a
+    quadratic dependence at ∆φ = 0 [26]. When probing the suppressed
+    motional sideband [Fig. 2(b) left], we observe only features that are
+    due to the off-resonant (by ≈ 1.2 MHz) carrier coupling. By changing
+    ∆φ of the SW, we can realise any ratio between carrier and sideband
+    coupling. We measure Rabi frequencies by scanning the SW pulse
+    duration at the carrier resonance, for both ∆φ = π and ∆φ = 0. We
+    observe this ratio to be 18, corresponding to a suppression 01234 2Ω/δ
+    0 20 40 60 80 Ω /2π (kHz) SDF traveling wave standing wave 024 2Ω/δ
+    0.0 0.5 1.0 Ω /(ηΩ) SDF FIG. 3. Spin-dependent force magnitude ΩSDF
+    (normalized by ηΩ in the inset) versus 2Ω/δ , as measured for a single
+    ion with η = 0.05. We extract ΩSDF by applying a conventional
+    bichromatic TW field (squares) or a bichromatic SW field (triangles),
+    for variable durations. The solid lines show the analytical
+    dependence; as predicted by the theory and shown explicitly in the
+    inset, the TW coupling follows the Bessel functions (|J0 + J2|), while
+    the SW coupling remains constant [34]. of 25 dB between maximal and
+    minimal carrier coupling. This suppression is consistent with the
+    measured interferometric stability and the residual power imbalance
+    between b1 and b2.\\
+
+    Expand this section and show some data of RBM results:\\
+    Furthermore, we perform randomized benchmarking [32] to evaluate
+    the quality of single-qubit gates implemented using the SW and TW
+    with the same duty cycle. We obtain an error of 1.44(3) × 10−3 and
+    1.73(3) × 10−3 per Clifford gate, respectively. Thus, use of the
+    SW is not detrimental to single-qubit control. \\
+
+    This has a lot of experimental detail. Maybe too much for the report.\\
+    Next, we experimentally investigate the saturation effect caused
+    by the non-commuting carrier coupling [Eq. (3)] when generating an
+    SDF with a bichromatic TW, and compare it to the SDF generated by
+    a bichromatic SW. To create the TW bichromatic field, we apply two
+    tones to the AOM in b1, while for the SW we apply the same two
+    tones in both beams, b1 and b2. These tones are symmetrically
+    detuned by δ ≈ ±ωz from the qubit resonance. This results in an
+    SDF on the axial mode (ωz/2π ≈ 1.2 MHz) of a single ion. We
+    extract its coupling strength ΩSDF(Ω, δ ) by applying the SDF for
+    variable durations [29]. We used an adiabatic ramp duration of 3.6
+    μs for these measurements [33]. For the TW, we observe a coupling
+    that scales with the expected Bessel function dependence |J0(2Ω/δ
+    ) + J2(2Ω/δ )| [Eq. (4), Fig. 3]. Hence, when using the TW, there
+    exists a maximum achievable interaction strength that imposes a
+    speed limit on the interaction regardless of the available laser
+    power. This limit is caused by the increasingly strong offresonant
+    non-commuting carrier excitation and not by technical aspects such
+    as pulse shaping. For the SW, we demonstrate that no such
+    speed-limit exists. We place the ion at the maximum intensity of
+    both the red- and the blue-detuned SWs [26] and observe that the
+    interaction magnitude [34] increases linearly with Ω (Fig. 3).\\
+
+    We experimentally demonstrate two-qubit MS gates using a bichromatic
+    TW for gate speeds in a regime where the carrier coupling induces a
+    significant error which cannot be eliminated adiabatically. However,
+    the bichromatic SW enables us to surpass this limit without degrading
+    the fidelity (Fig. 4). To implement the SW-MS gate, we simultaneously
+    suppress the carrier coupling on both ions by adjusting the ion
+    spacing such that they are both placed at anti-nodes of the SW
+    [Fig. 1(c)] [26]. We perform the TW and SW two-qubit entangling gates
+    on the axial in-phase mode and optimize the experimental parameters to
+    maximize the Bell-state fidelity for a fixed gate duration. In both
+    cases, we use a ramp duration of 10 μs to minimize coupling to the
+    other motional modes [33]. This pulse ramping could be replaced with
+    more sophisticated amplitude shaping techniques [16, 35]. In Fig. 4(a)
+    we show the two-qubit fidelities achieved with the two schemes as a
+    function of the effective gate duration (2π/δg, where δg = δ − ωz)
+    [37]. For slower gates, the fidelity of the SW-MS is comparable with
+    that of the TW-MS. For faster entangling gates, the fidelity of the
+    TW-MS degrades rapidly. This is also predicted by direct numerical
+    integration of Eq. (3); we set all the parameters to the experimental
+    values except for the Rabi frequency Ω, which we optimize for maximum
+    fidelity (dashed line). We also indicate the idealized case which
+    neglects imperfect transfer into the interaction picture w.r.t. the
+    carrier [Eq. (3)] (dotted line). We believe that the measured
+    fidelities degrade sooner as a result of experimental imperfections
+    (e.g. ramp shape) not captured by the numerical integration. In
+    contrast, the fidelity for the SW-MS is consistent with ≈ 0.95 over
+    the entire available power range, showing that we have eliminated the
+    limit arising from the carrier coupling. The shortest SW-MS gate was
+    15 μs, limited by the available total power of 29 mW. \\
+
+    *Skip about laser power section \\
+
+    *Shorten conclusion and change in such a way that focusses on what to
+    improve/adapt in FG setup\\
+
+    In conclusion, we implemented single- and two-qubit operations for
+    trapped-ion qubits using a phase-stabilized SW. Two
+    counter-propagating beams create the SW, whose relative phase ∆φ at
+    the ion position is stable to ≈ λ /100. This enabled us to tune the
+    ratio of the field intensity and gradient that the ions experience,
+    which sets the relative strengths of the sideband and carrier
+    interactions. We use this new degree of control to suppress the
+    unwanted off-resonant carrier coupling (by a factor of 18), while
+    coherently enhancing the motional coupling during two-qubit gates. We
+    show theoretically and experimentally that the non-commuting carrier
+    term imposes a limit on the speed of conventional TW-MS gates, which
+    were avoided using the SW-MS interaction. These optical phase control
+    techniques could also be applied in the previous Raman-based scheme
+    [16], where they could mitigate squeezing terms, which were the
+    leading error source; we note that for the SW-MS those terms are
+    inherently suppressed. Our work shows a clear path towards entangling
+    gates with durations comparable to the motional period of the ions (∼
+    1 μs or shorter) at wavelengths that are amenable to largescale chip
+    integration using standard integrated optics [3840] and without the
+    technical challenges of using high-power blue Raman beams [16], pulsed
+    lasers [41, 42] or Rydberg schemes [43].\\
+
+    - The ability for single addressing allows MS gate between two ions in a multi ion chain.
+    - Also higher intensity at ion can push quadrupole gate time down to speeds where other motional mode inclusion matters (vera).
+    - Hence explore Fast Optical transition gates at 729 nm in multi ion chain.
+    
+%}}}
+
 %Experimental Details {{{
-Experimental Details
+\textbf{Experimental Details}\\
 
 
-subtitle Ion Trapping Apparatus\\
+subtitle \textbf{Ion Trapping Apparatus}\\
 
 The technical complexity of ion trapping experiments may be reduced to
 solving two problems: Controlling the state of the ion (both internal
@@ -135,7 +357,7 @@ proof of principle fast gate schemes have been tested. The limitations
 of ``Blade'' for further fast gate work will be made apparant and
 the new proposed system, known as ``FastGates'', will be described. 
 
-subtitle Ion and Trap\\
+subtitle \textbf{Ion and Trap}\\
 
 As mentioned, the overall system we desire is a spin coupled to a
 spring. Our spin in this case being a Hydrogen-like ion, and the
@@ -192,7 +414,7 @@ where $w_v$ are the mode frequencies in the three dimensional
 coordinated. We define $z$ to be the axial direction of the trap and
 typically assume $w_z$ << $w_x$, $w_y$ to allow a 1D ion crystal to
 lie along the axial direction of the trap. We aim for an axial ion
-separation of around $5$~um which, for $^+$Ca_{40} ions means a
+separation of around $5$~um which, for $^+Ca_{40}$ ions means a
 trapping potential of $w_z \approx 2\pi * 1.6$~MHz. We plan for around
 $5$~MHz for our radial frequencies as we will use one such mode for
 implementing two-qubit entangling gates. This higher frequency is for
@@ -228,7 +450,7 @@ slit allows for dual high NA optical access (NA = XX), which is an
 important factor for our proposed single addressing standing wave
 experiment.
 
-subtitle Laser systems\\
+subtitle \textbf{Laser systems}\\
 
 We have described the trapping of an ion, now we must look at our
 strategies for manipulating the internal states and collective motion
@@ -285,7 +507,7 @@ All of the above systems are Toptica Diode lasers coupled to a cavity
 for PDH locking.
 
 
-subtitle The vacuum system\\
+subtitle \textbf{The vacuum system}\\
 
 Here we shall describe the instrumentation required, and being
 constructed, for decouping the ion from any unwanted external
@@ -319,7 +541,7 @@ MuMetal shielding to suppress external magnetic fields. Using XX3mm
 thick two layer system with a quoted magnetic field reduction of 100.
 
 
-subtitle Single Addressing\\
+subtitle \textbf{Single Addressing}\\
 
 729 High NA (0.6) lens we can achieve waist radius of < 1 um.  With
 our axial trap freq of XXX we get ion spacing of ~ 5um.  Using AOD
@@ -389,6 +611,7 @@ shuttling of ions is not practical.
 
 
 subtitle FastGates Apparatus\\
+*This has been (to be) incorportated into the above section. \\
 
 Here we describe the design of the new ``FastGates'' system which is
 tailored for the exploration of fast, non-adiabatic entangling
@@ -410,14 +633,10 @@ environmental magnetic fields.
 
 %}}}
 
-%Results and Discussion {{{
-Results and Discussion
-    *Carrier nulling on Blade
-%}}}
-
 %Outlook {{{
 Outlook
-    Current state of building up apparatus
+    Current state of building up apparatus.
+    Immediate next steps.
     Proposed first experiments?
 
 %}}}

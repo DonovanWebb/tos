@@ -1,96 +1,141 @@
-\documentclass{article}
-\begin{document}
+%Settings{{{
+\documentclass[11pt]{iopart}
+\usepackage{graphicx}
+\usepackage{iopams}
+
+% Fixing iopams poor centering of equations:
+\expandafter\let\csname equation*\endcsname\relax
+\expandafter\let\csname endequation*\endcsname\relax
+\usepackage{amsmath}
+%
+%}}}
 
 %Plan {{{ 
 % Title
-Make sure that I only talk about areas I am really interested in and want to talk about. 
+%% Make sure that I only talk about areas I am really interested in and want to talk about. 
 
 
-State of the art experimental apparatus for fast entangling gates in trapped multi-ion crystals
+%% State of the art experimental apparatus for fast entangling gates in trapped multi-ion crystals
 
-11 Page limit
+%% 11 Page limit
 
-(Short) intro to trapped ion QC and Theory on Fast Gates schemes: ~ 2 pages
+%% (Short) intro to trapped ion QC and Theory on Fast Gates schemes: ~ 2 pages
 
-    * Motivating why QC important. ~ 1 paragraph
+%%     * Motivating why QC important. ~ 1 paragraph
 
-    * Trapped Ion QC - General idea of spin (ion) coupled with HO (Trapping potential) and how this satisfies QC requirements. ~ 1-2 paragraph
+%%     * Trapped Ion QC - General idea of spin (ion) coupled with HO (Trapping potential) and how this satisfies QC requirements. ~ 1-2 paragraph
 
-    * Entangling gates MS gate. Statement of Hamiltonian and how this is experimentally realised. ~ 1 paragraph
+%%     * Entangling gates MS gate. Statement of Hamiltonian and how this is experimentally realised. ~ 1 paragraph
 
-    * Fast Gate Schemes (Non-Adiabatic Entanglement). Amplitude shaped pulses. ~ 1 sentence and reference
-        Why we want to move to quadrupole optical transition rather than Raman (Scattering error and squeezing term)
+%%     * Fast Gate Schemes (Non-Adiabatic Entanglement). Amplitude shaped pulses. ~ 1 sentence and reference
+%%         Why we want to move to quadrupole optical transition rather than Raman (Scattering error and squeezing term)
 
-    * Carrier Nulling. (excerpt from paper starts) ~ 2 paragraphs
-
- 
-
-Experimental results from Carrier Nulling (excerpts from paper): ~ 2+ pages
-
-    * Description of Blade ~ 1 figure + 1 paragraph
-
-    * Phase control ~ 1 paragraph
-
-    * Proof of principle on Blade apparatus ~ 2 paragraph (statement of results) 2 figures
-
-    RBM work ~ few sentences
+%%     * Carrier Nulling. (excerpt from paper starts) ~ 2 paragraphs
 
  
 
-FastGates buildup: ~ 4 pages
+%% Experimental results from Carrier Nulling (excerpts from paper): ~ 2+ pages
 
-    * Motivation for why we want a new system (compare with Blade) ~ 1 paragraph
+%%     * Description of Blade ~ 1 figure + 1 paragraph
 
-    * Description of FastGates – central figure of full physical experiment and figure of control systems ~ 2 paragraphs large figure
-        In effect list all the benefits over Blade - and how it fits into requirements for NISQ?
+%%     * Phase control ~ 1 paragraph
 
-    Now looking at components of new system from center outward:
+%%     * Proof of principle on Blade apparatus ~ 2 paragraph (statement of results) 2 figures
 
-    * Ca40 energy diagram  ~ 1 paragraph and energy level figure
-        Simple energy structure. Less spectator modes compared to Ca43 -> less off resonant transitions. But sensitive to B field.
+%%     RBM work ~ few sentences
 
-    * NPL trap, trap frequencies, substrate bias for crystal rotation ~ 1 paragraph 1 figure
-        What trap freq do we want for fast gates 
+ 
 
-    * In vacuum system details ~ 1 paragraph 1 figure
+%% FastGates buildup: ~ 4 pages
 
-    * Dual Optical Access High NA system ~ few sentences
+%%     * Motivation for why we want a new system (compare with Blade) ~ 1 paragraph
 
-    * Single Ion Addressing with AOD, power requirements ~ 1 paragraph
-        This is potentially a drain of time – time bound looking into this.
+%%     * Description of FastGates – central figure of full physical experiment and figure of control systems ~ 2 paragraphs large figure
+%%         In effect list all the benefits over Blade - and how it fits into requirements for NISQ?
 
-    * Addressing and Readout optics design? ~ short 1 figure
+%%     Now looking at components of new system from center outward:
 
-    * Extension to standing wave single ion addressing – ideas/design for phase feedback ~ few sentences 1 figure?
+%%     * Ca40 energy diagram  ~ 1 paragraph and energy level figure
+%%         Simple energy structure. Less spectator modes compared to Ca43 -> less off resonant transitions. But sensitive to B field.
 
-    * 729 system design, PDH locking, FNC ~ 1 paragraph
+%%     * NPL trap, trap frequencies, substrate bias for crystal rotation ~ 1 paragraph 1 figure
+%%         What trap freq do we want for fast gates 
+
+%%     * In vacuum system details ~ 1 paragraph 1 figure
+
+%%     * Dual Optical Access High NA system ~ few sentences
+
+%%     * Single Ion Addressing with AOD, power requirements ~ 1 paragraph
+%%         This is potentially a drain of time – time bound looking into this.
+
+%%     * Addressing and Readout optics design? ~ short 1 figure
+
+%%     * Extension to standing wave single ion addressing – ideas/design for phase feedback ~ few sentences 1 figure?
+
+%%     * 729 system design, PDH locking, FNC ~ 1 paragraph
 
    
 
-Outlook: ~ 1 page
+%% Outlook: ~ 1 page
 
-    * Overall goals of project
-        - Optical phase control of laser field at the ion.
-        - Fastgates on multi ion chain.
+%%     * Overall goals of project
+%%         - Optical phase control of laser field at the ion.
+%%         - Fastgates on multi ion chain.
 
-    * Immediate tasks: Finishing vacuum work, trap on table. Trapping ions 
+%%     * Immediate tasks: Finishing vacuum work, trap on table. Trapping ions 
 
-    * Proposed first experiments? 
-        1st paper: EOM to keep stark shift the same as pulse amplitude changes 
-        Explore this for 1 day
-            Ask about scheme 
-            This is a problem with gates with multiple pulses. 
-                Theory on this
+%%     * Proposed first experiments? 
+%%         1st paper: EOM to keep stark shift the same as pulse amplitude changes 
+%%         Explore this for 1 day
+%%             Ask about scheme 
+%%             This is a problem with gates with multiple pulses. 
+%%                 Theory on this
 
-What will my next 6 months, 1 yr, 2 yrs look like? 
+%% What will my next 6 months, 1 yr, 2 yrs look like? 
 %}}}
 
-%Abstract {{{
-Abstract
+%Opening{{{
+\begin{document}
+\title[]{State of the art experimental apparatus for fast entangling gates in trapped multi-ion crystals}
+
+\author{Donovan Webb}
+
+\address{Department of Physics,
+University of Oxford}
+\ead{donovan.webb@physics.ox.ac.uk}
+
+\begin{abstract}
+
+    Scalable trapped-ion quantum computation relies on the development
+    of high-fidelity fast entangling gates in many ion crystals.
+    %
+    Currently the speed of geometric phase gates are limited by either large
+    scattering errors (with Raman transitions) or off-resonant carrier
+    excitations (with quadrupole transitions).
+    %
+    Utilizing standing waves offers a potential pathway to achieve
+    fast entanglement in quadrupole transitions due to suppressing
+    undesired carrier excitations.
+    %
+    Using a legacy apparatus we present initial results of this
+    carrier suppression in the~$674$~nm quadropole transition of
+    \textsuperscript{88}Sr\textsuperscript{+}. We demonstrate
+    fast two-qubit entangling gates which exceed the entangling ``speed
+    limit'' imposed by off resonant carrier excitations.
+    %
+    To explore these ``fast gates'' at durations comparable to the
+    secular trap frequency, and in multi-ion chains, a new system is
+    been constructed. This system will use a segmented 3D Paul trap
+    for greater control of long ion chains, and will feature single
+    ion addressing for both selective and high power coherent
+    operations.  We present the current progress and roadmap of this
+    next-generation platform and motivations behind design choices.
+
+\end{abstract}
 %}}}
 
 %Introduction {{{
-Introduction
+\section{Introduction}
 Previously the physicist was limited to thought experiments on the
 nature of highly coherent quantum effects. It was even thought to be
 inconceivable for single atoms to be probed and entangled. However the
@@ -104,25 +149,18 @@ With the high degree of experimental control Ion trap systems coupled
 with low linewidth lasers provides, trapped ions are a popular
 platform for enabling Quantum Computation.
 
-    *Trapped Ion QC
-    Paul trap details
-    General idea of spin coupled with HO
-    *Entangling gates MS gate, light shift gate
-    *Non-Adiabatic interactions
-    *Fast Gate Schemes
+    *Trapped Ion QC\\
+    Paul trap details\\
+    General idea of spin coupled with HO\\
+    *Entangling gates MS gate \\
+    *Non-Adiabatic interactions \\
+    *Fast Gate Schemes \\
 
-%}}}
-
-%Results and Discussion {{{
-\textbf{Results and Discussion}\\
-
-    Excerpts from carrier nulling paper kind of want to put this after the FG description... Or could I shorten this massively to reduce emphasis?\\
-
-    ******************  Move to intro  ************************\\
     Controlled light-matter interactions are essential for quantum
     computing [1–3], quantum simulation [4, 5], and metrology [6,
       7]\\
 
+    ******************  From paper  ************************\\
     For trapped ions, controlled light-matter interactions typically require
     carrier interactions that only couple the internal qubit states,
     as well as sideband interactions that couple these internal states
@@ -156,6 +194,12 @@ platform for enabling Quantum Computation.
     this speed limit by selectively enhancing the spin-motion coupling
     while coherently suppressing the detrimental carrier term [14].\\
     ***********************************************************\\
+%}}}
+
+%Results and Discussion {{{
+\section{Results and Discussion}
+
+    Excerpts from carrier nulling paper kind of want to put this after the FG description... Or could I shorten this massively to reduce emphasis?\\
     
     As discussed in sectionXX, the use of phase-stable standing waves (SW) is a clear route to fast entangling gates on quadrupole transition qubits. 
     Here we report experimental results of both SW single qubit gates and SW Molmer Sorensen (MS) entangling gates performed on the Blade apparatus.\\
@@ -331,17 +375,16 @@ platform for enabling Quantum Computation.
     technical challenges of using high-power blue Raman beams [16], pulsed
     lasers [41, 42] or Rydberg schemes [43].\\
 
-    - The ability for single addressing allows MS gate between two ions in a multi ion chain.
-    - Also higher intensity at ion can push quadrupole gate time down to speeds where other motional mode inclusion matters (vera).
-    - Hence explore Fast Optical transition gates at 729 nm in multi ion chain.
+    - The ability for single addressing allows MS gate between two ions in a multi ion chain.\\
+    - Also higher intensity at ion can push quadrupole gate time down to speeds where other motional mode inclusion matters (vera).\\
+    - Hence explore Fast Optical transition gates at 729 nm in multi ion chain.\\
     
 %}}}
 
 %Experimental Details {{{
-\textbf{Experimental Details}\\
+\section{Experimental Details}
 
-
-subtitle \textbf{Ion Trapping Apparatus}\\
+\subsection{Ion Trapping Apparatus}
 
 The technical complexity of ion trapping experiments may be reduced to
 solving two problems: Controlling the state of the ion (both internal
@@ -357,7 +400,7 @@ proof of principle fast gate schemes have been tested. The limitations
 of ``Blade'' for further fast gate work will be made apparant and
 the new proposed system, known as ``FastGates'', will be described. 
 
-subtitle \textbf{Ion and Trap}\\
+\subsection{Ion and Trap}
 
 As mentioned, the overall system we desire is a spin coupled to a
 spring. Our spin in this case being a Hydrogen-like ion, and the
@@ -450,7 +493,7 @@ slit allows for dual high NA optical access (NA = XX), which is an
 important factor for our proposed single addressing standing wave
 experiment.
 
-subtitle \textbf{Laser systems}\\
+\subsection{Laser systems}
 
 We have described the trapping of an ion, now we must look at our
 strategies for manipulating the internal states and collective motion
@@ -507,7 +550,7 @@ All of the above systems are Toptica Diode lasers coupled to a cavity
 for PDH locking.
 
 
-subtitle \textbf{The vacuum system}\\
+\subsection{The vacuum system}
 
 Here we shall describe the instrumentation required, and being
 constructed, for decouping the ion from any unwanted external
@@ -541,7 +584,7 @@ MuMetal shielding to suppress external magnetic fields. Using XX3mm
 thick two layer system with a quoted magnetic field reduction of 100.
 
 
-subtitle \textbf{Single Addressing}\\
+\subsection{Single Addressing}
 
 729 High NA (0.6) lens we can achieve waist radius of < 1 um.  With
 our axial trap freq of XXX we get ion spacing of ~ 5um.  Using AOD
@@ -634,10 +677,11 @@ environmental magnetic fields.
 %}}}
 
 %Outlook {{{
-Outlook
+\section{Outlook}
     Current state of building up apparatus.
     Immediate next steps.
     Proposed first experiments?
+    GANNT diagram?
 
 %}}}
   

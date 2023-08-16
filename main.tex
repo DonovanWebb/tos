@@ -1,5 +1,5 @@
 %Settings{{{
-\documentclass[11pt]{iopart}
+\documentclass[12pt]{iopart}
 \usepackage{graphicx}
 \usepackage{iopams}
 
@@ -136,25 +136,40 @@ University of Oxford}
 
 %Introduction {{{
 \section{Introduction}
-Previously the physicist was limited to thought experiments on the
-nature of highly coherent quantum effects. It was even thought to be
-inconceivable for single atoms to be probed and entangled. However the
-advent of Ion traps, specifically Paul and Penning traps, have enabled
-the experimental exploration of Atomic and Laser physics and some of
-the most precise measurements of physical constants.  Decoherence may
-be seen as measurement of a state by the environment. Ion traps allow
-the decoupling of single ions to the surrounding environment and
-thus...
-With the high degree of experimental control Ion trap systems coupled
-with low linewidth lasers provides, trapped ions are a popular
-platform for enabling Quantum Computation.
 
     *Trapped Ion QC\\
-    Paul trap details\\
     General idea of spin coupled with HO\\
     *Entangling gates MS gate \\
     *Non-Adiabatic interactions \\
     *Fast Gate Schemes \\
+
+Previously the physicist was limited to thought experiments on the
+Quantum nature of single particles. It was inconceivable to isolate,
+probe and entangle together single particles. However the advent of
+Ion traps, specifically Paul and Penning traps, have enabled the
+experimental exploration and corroboration of Atomic theory producing
+incredibly precise measurements such as XXclocks, relativity, g
+factorXX [clocks, relativity, g factor].
+
+With the high degree of experimental control of a quantum system
+exhiibited by Ion trap systems, they are an obvious and increasingly
+mature platform for enabling Quantum Computation.
+
+Ion-traps trap ions through a combination of static and oscillating
+electric fields. Ions will sit at local minima of this potential and
+experience harmonic motion. When $N$ ions are trapped
+simultaneously they may form linear strings or crystals due to the
+combination of trapping potential and mutual repulsion between
+like charged ions. A linear crystal of N ions will exhibit $3N$ normal
+modes. These single ions within the crystal may be modelled as two
+level ``spin'' systems, whilst the harmonic motion is modelled as a
+``spring'' system. We may utilize the shared motion of ions to
+entangle their spin states.
+
+Describe entangling...
+With Lamb-Dicke approximation:
+H = Carrier + eta*SB
+
 
     Controlled light-matter interactions are essential for quantum
     computing [1–3], quantum simulation [4, 5], and metrology [6,
@@ -193,6 +208,19 @@ platform for enabling Quantum Computation.
     instead enables high-fidelity entangling operations that can surpass
     this speed limit by selectively enhancing the spin-motion coupling
     while coherently suppressing the detrimental carrier term [14].\\
+
+
+    We show that the
+    presence of the carrier coupling term, in the context of the TW-MS
+    gate, leads to a reduction in the spin-dependent force (SDF)
+    magnitude, which scales with the Rabi frequency of this detrimental
+    term, posing an inherent speed limit for this mechanism.
+
+    It can be shown that a travelling wave MS in the interaction picture obeys
+    equation 4 of paper, where the SDF follows a bessel like
+    relationship as shown in fig X, featuring a global maximum
+    achievable force amplitude. This maximum point direclty limits the
+    speed at which gates can be achieved.\\
     ***********************************************************\\
 %}}}
 
@@ -214,46 +242,41 @@ platform for enabling Quantum Computation.
     resonance with the qubit transition while placing the node(s) of
     the SW at the position of the ion(s). The two-qubit entangling gate
     is implemented via an MS-type scheme where we use a bichromatic SW
-    instead of the conventional bichromatic TW. We show that the
-    presence of the carrier coupling term, in the context of the TW-MS
-    gate, leads to a reduction in the spin-dependent force (SDF)
-    magnitude, which scales with the Rabi frequency of this detrimental
-    term, posing an inherent speed limit for this mechanism. Using the
+    instead of the conventional bichromatic TW.\\
+
+    Using the
     SW-MS instead, with the anti-nodes placed at the ions, we strongly
     suppress the undesired carrier term and show that we can surpass
     this speed limit.\\
 
-    * Could shift these derivations to the intro. \\
-    First derivation of equation 1 of paper. \\
-    By setting δ = 0 or δ = ±ωz, we can bring the carrier or sidebands
-    into resonance, respectively. With ∆φ the SW has an additional
-    degree of freedom compared to the TW: by setting 2 ∆φ = 0 we can
-    drive the first sidebands while suppressing all even terms in the
-    Lamb-Dicke expansion [26], including the carrier term. Conversely,
-    if we set ∆φ = π we drive the carrier coupling and suppress all
-    odd terms in the Lamb-Dicke expansion, including the first
-    sidebands. \\
+    %% ******************* Appendix? ****************
+    %% * Could shift these derivations to the intro. \\
+    %% First derivation of equation 1 of paper. \\
+    %% By setting δ = 0 or δ = ±ωz, we can bring the carrier or sidebands
+    %% into resonance, respectively. With ∆φ the SW has an additional
+    %% degree of freedom compared to the TW: by setting 2 ∆φ = 0 we can
+    %% drive the first sidebands while suppressing all even terms in the
+    %% Lamb-Dicke expansion [26], including the carrier term. Conversely,
+    %% if we set ∆φ = π we drive the carrier coupling and suppress all
+    %% odd terms in the Lamb-Dicke expansion, including the first
+    %% sidebands. \\
 
-    The MS interaction requires two tones symmetrically detuned about the
-    qubit resonance by δ ≈ ±ωz. To construct the Hamiltonian for a SW-MS
-    interaction, we combine two monochromatic SWs as described by Eq. (1),
-    resulting in the bichromatic SW interaction\\
-    Equation 2 from paper\\
+    %% The MS interaction requires two tones symmetrically detuned about the
+    %% qubit resonance by δ ≈ ±ωz. To construct the Hamiltonian for a SW-MS
+    %% interaction, we combine two monochromatic SWs as described by Eq. (1),
+    %% resulting in the bichromatic SW interaction\\
+    %% Equation 2 from paper\\
 
-    where the phase ̃ φ =( ̃ φBD + ̃ φRD)/2 is now the mean optical phase
-    between the blue- (BD) and the red- (RD) detuned SWs. Further, we
-    assume that the BD and RD SWs are in phase at the position of the
-    ion(s), i.e. ∆φBD = ∆φRD = ∆φ . The first term corresponds to a
-    spin-dependent force (SDF) and the second term drives the carrier
-    transition off-resonantly. Notably, these terms commute. Similar to
-    the monochromatic SW, we can drive the motional coupling while
-    suppressing the spurious carrier coupling by setting ∆φ = 0.\\
+    %% where the phase ̃ φ =( ̃ φBD + ̃ φRD)/2 is now the mean optical phase
+    %% between the blue- (BD) and the red- (RD) detuned SWs. Further, we
+    %% assume that the BD and RD SWs are in phase at the position of the
+    %% ion(s), i.e. ∆φBD = ∆φRD = ∆φ . The first term corresponds to a
+    %% spin-dependent force (SDF) and the second term drives the carrier
+    %% transition off-resonantly. Notably, these terms commute. Similar to
+    %% the monochromatic SW, we can drive the motional coupling while
+    %% suppressing the spurious carrier coupling by setting ∆φ = 0.\\
 
-    It can be shown that a travelling wave MS in the interaction picture obeys
-    equation 4 of paper, where the SDF follows a bessel like
-    relationship as shown in fig X, featuring a global maximum
-    achievable force amplitude. This maximum point direclty limits the
-    speed at which gates can be achieved.\\
+    %% ***********************************************
 
     **Look at poster for description of phase feedback onto the ion -
     maybe exclude this to shorten section.\\
@@ -272,21 +295,24 @@ platform for enabling Quantum Computation.
     motional sideband [Fig. 2(b) left], we observe only features that are
     due to the off-resonant (by ≈ 1.2 MHz) carrier coupling. By changing
     ∆φ of the SW, we can realise any ratio between carrier and sideband
-    coupling. We measure Rabi frequencies by scanning the SW pulse
-    duration at the carrier resonance, for both ∆φ = π and ∆φ = 0. We
-    observe this ratio to be 18, corresponding to a suppression 01234 2Ω/δ
-    0 20 40 60 80 Ω /2π (kHz) SDF traveling wave standing wave 024 2Ω/δ
-    0.0 0.5 1.0 Ω /(ηΩ) SDF FIG. 3. Spin-dependent force magnitude ΩSDF
-    (normalized by ηΩ in the inset) versus 2Ω/δ , as measured for a single
-    ion with η = 0.05. We extract ΩSDF by applying a conventional
-    bichromatic TW field (squares) or a bichromatic SW field (triangles),
-    for variable durations. The solid lines show the analytical
-    dependence; as predicted by the theory and shown explicitly in the
-    inset, the TW coupling follows the Bessel functions (|J0 + J2|), while
-    the SW coupling remains constant [34]. of 25 dB between maximal and
-    minimal carrier coupling. This suppression is consistent with the
-    measured interferometric stability and the residual power imbalance
-    between b1 and b2.\\
+    coupling.\\
+
+
+    %% We measure Rabi frequencies by scanning the SW pulse
+    %% duration at the carrier resonance, for both ∆φ = π and ∆φ = 0. We
+    %% observe this ratio to be 18, corresponding to a suppression 01234 2Ω/δ
+    %% 0 20 40 60 80 Ω /2π (kHz) SDF traveling wave standing wave 024 2Ω/δ
+    %% 0.0 0.5 1.0 Ω /(ηΩ) SDF FIG. 3. Spin-dependent force magnitude ΩSDF
+    %% (normalized by ηΩ in the inset) versus 2Ω/δ , as measured for a single
+    %% ion with η = 0.05. We extract ΩSDF by applying a conventional
+    %% bichromatic TW field (squares) or a bichromatic SW field (triangles),
+    %% for variable durations. The solid lines show the analytical
+    %% dependence; as predicted by the theory and shown explicitly in the
+    %% inset, the TW coupling follows the Bessel functions (|J0 + J2|), while
+    %% the SW coupling remains constant [34]. of 25 dB between maximal and
+    %% minimal carrier coupling. This suppression is consistent with the
+    %% measured interferometric stability and the residual power imbalance
+    %% between b1 and b2.\\
 
     Expand this section and show some data of RBM results:\\
     Furthermore, we perform randomized benchmarking [32] to evaluate
@@ -295,28 +321,28 @@ platform for enabling Quantum Computation.
     1.73(3) × 10−3 per Clifford gate, respectively. Thus, use of the
     SW is not detrimental to single-qubit control. \\
 
-    This has a lot of experimental detail. Maybe too much for the report.\\
-    Next, we experimentally investigate the saturation effect caused
-    by the non-commuting carrier coupling [Eq. (3)] when generating an
-    SDF with a bichromatic TW, and compare it to the SDF generated by
-    a bichromatic SW. To create the TW bichromatic field, we apply two
-    tones to the AOM in b1, while for the SW we apply the same two
-    tones in both beams, b1 and b2. These tones are symmetrically
-    detuned by δ ≈ ±ωz from the qubit resonance. This results in an
-    SDF on the axial mode (ωz/2π ≈ 1.2 MHz) of a single ion. We
-    extract its coupling strength ΩSDF(Ω, δ ) by applying the SDF for
-    variable durations [29]. We used an adiabatic ramp duration of 3.6
-    μs for these measurements [33]. For the TW, we observe a coupling
-    that scales with the expected Bessel function dependence |J0(2Ω/δ
-    ) + J2(2Ω/δ )| [Eq. (4), Fig. 3]. Hence, when using the TW, there
-    exists a maximum achievable interaction strength that imposes a
-    speed limit on the interaction regardless of the available laser
-    power. This limit is caused by the increasingly strong offresonant
-    non-commuting carrier excitation and not by technical aspects such
-    as pulse shaping. For the SW, we demonstrate that no such
-    speed-limit exists. We place the ion at the maximum intensity of
-    both the red- and the blue-detuned SWs [26] and observe that the
-    interaction magnitude [34] increases linearly with Ω (Fig. 3).\\
+    %% This has a lot of experimental detail. Maybe too much for the report.\\
+    %% Next, we experimentally investigate the saturation effect caused
+    %% by the non-commuting carrier coupling [Eq. (3)] when generating an
+    %% SDF with a bichromatic TW, and compare it to the SDF generated by
+    %% a bichromatic SW. To create the TW bichromatic field, we apply two
+    %% tones to the AOM in b1, while for the SW we apply the same two
+    %% tones in both beams, b1 and b2. These tones are symmetrically
+    %% detuned by δ ≈ ±ωz from the qubit resonance. This results in an
+    %% SDF on the axial mode (ωz/2π ≈ 1.2 MHz) of a single ion. We
+    %% extract its coupling strength ΩSDF(Ω, δ ) by applying the SDF for
+    %% variable durations [29]. We used an adiabatic ramp duration of 3.6
+    %% μs for these measurements [33]. For the TW, we observe a coupling
+    %% that scales with the expected Bessel function dependence |J0(2Ω/δ
+    %% ) + J2(2Ω/δ )| [Eq. (4), Fig. 3]. Hence, when using the TW, there
+    %% exists a maximum achievable interaction strength that imposes a
+    %% speed limit on the interaction regardless of the available laser
+    %% power. This limit is caused by the increasingly strong offresonant
+    %% non-commuting carrier excitation and not by technical aspects such
+    %% as pulse shaping. For the SW, we demonstrate that no such
+    %% speed-limit exists. We place the ion at the maximum intensity of
+    %% both the red- and the blue-detuned SWs [26] and observe that the
+    %% interaction magnitude [34] increases linearly with Ω (Fig. 3).\\
 
     We experimentally demonstrate two-qubit MS gates using a bichromatic
     TW for gate speeds in a regime where the carrier coupling induces a
@@ -347,8 +373,6 @@ platform for enabling Quantum Computation.
     the entire available power range, showing that we have eliminated the
     limit arising from the carrier coupling. The shortest SW-MS gate was
     15 μs, limited by the available total power of 29 mW. \\
-
-    *Skip about laser power section \\
 
     *Shorten conclusion and change in such a way that focusses on what to
     improve/adapt in FG setup\\
@@ -395,33 +419,38 @@ lasers for ionization, cooling, repumping, stateprep, coherent
 control and readout.
 As with all ventures in experimental physics, as technologies mature, so
 too do the capabilities and scope of our apparatus.  Here we shall
-describe the ``Old'' apparatus, known in short as ``Blade'', where
-proof of principle fast gate schemes have been tested. The limitations
-of ``Blade'' for further fast gate work will be made apparant and
-the new proposed system, known as ``FastGates'', will be described. 
+describe both the ``old'' apparatus, known in short as ``Blade'', where
+proof of principle fast gate schemes have been tested, and the new
+proposed system, known as ``FastGates'', which solves critical
+limitations of ``Blade'' for further exploring fast gates.
 
 \subsection{Ion and Trap}
 
 As mentioned, the overall system we desire is a spin coupled to a
 spring. Our spin in this case being a Hydrogen-like ion, and the
 spring being the harmonic motion of the ions within the trapping
-potential. The ion traps we use to creeate such a potential are linear
+potential. The ion traps we use to create such a potential are linear
 Paul traps, a schematic of such is shown in FigureX. As explained by
-Earnshaw's theorem, a stable stationary point in 3D can not be
-realized using static electric field. Therefore a Paul trap utilizes
-an oscillating electric field to create a trapping
-pseudopotential. There are various geometries for realizing a paul
-trap, shown in Figure X are: A macro 3D Blade trap; a surface trap;
-and a microfabricated multilayer trap.  A Blade trap, as is used in
-the ``Blade'' apparatus, has axial confinement created by DC end caps
-and radial confinement by supplying an oscillating RF on the blades.
-In ``Blade'' the ion endcap distance is $1.15$~mm, and ion-blade
-distance is $0.5$~mm. Typical operating frequency for the RF
-electrodes of the ``Blade'' trap are $28.0133$ MHz leading to an axial
-ion frequency of $1.860$ MHz and radial frequencies of $4.077$ MHz and
-$4.341$ MHz.
+Earnshaw's theorem,
+$$\del^2 V = 0,$$
+a stable stationary point in 3D can not be realized using a static
+electric potential, $V$, as if the potential is confining in 2
+dimensions, it will be anticonfining in the third. Therefore to
+achieve stable trapping a psuedopotential must be utilized.
+%Include pseudopot eqn?
+A Paul trap achieves this through an oscillating electric field
+providing radial confinement and a static field to create axial
+confinement. There are various popular geometries for realizing a Paul
+trap: Macro 3D Blade traps; surface traps; and microfabricated
+segmented 3D traps.  A Blade trap, as is used in the ``Blade''
+apparatus, has axial confinement created by DC end caps and radial
+confinement by supplying an oscillating RF voltage to the blades. In
+``Blade'' the ion endcap distance is $1.15$~mm, and ion-blade distance
+is $0.5$~mm. Typical operating frequency for the RF electrodes of the
+``Blade'' trap are $28.0133$ MHz leading to an axial ion frequency of
+$1.860$ MHz and radial frequencies of $4.077$ MHz and $4.341$ MHz.
 
-For the sake of comparison, recently the surface style linear Paul
+Recently the surface style linear Paul
 trap has gained popularity due to the maturity of chip fabrication
 technologies and the potential route to scalability this offers. In
 the surface trap, the 3D blade and endcap geometry of the ``macro''
@@ -446,7 +475,7 @@ figureX. The radial trapping is provided by RF rails on opposite
 diagonals of the slit whilst axial trapping may be realized by DC
 electrodes on both surfaces. The Ion electrode distance is now of the
 order $200$ um, meaning lower heating, whilst the more optimal 3D
-geometry allows for a deep potential at this distance. The
+geometry allows for a deep potential at this distance (XX 50x surface trap [Guido]). The
 microfabrication techniques also allow a segmented design suitable for
 multizone operations and ion shuttling.  The 3D confining potential
 leads to motion of the ions following the Hamiltonian
@@ -458,20 +487,28 @@ coordinated. We define $z$ to be the axial direction of the trap and
 typically assume $w_z$ << $w_x$, $w_y$ to allow a 1D ion crystal to
 lie along the axial direction of the trap. We aim for an axial ion
 separation of around $5$~um which, for $^+Ca_{40}$ ions means a
-trapping potential of $w_z \approx 2\pi * 1.6$~MHz. We plan for around
-$5$~MHz for our radial frequencies as we will use one such mode for
-implementing two-qubit entangling gates. This higher frequency is for
-a few reasons: The doppler cooling limit ($\overline{n} = \Gamma/w$,
-where $\Gamma$ is the transition linewidth and $w$ is the
-frequency of the mode being cooled) goes with the reciprocal of the
-mode frequency and so higher mode frequencies leads to a lower
-temperature after cooling; a higher c.o.m. radial mode leads to better
-separation of radial modes in a multiion crystal => simpler
-implementation of fast gate schemes where multiple motional modes are
-all excited; can push to faster gates?  Given a model of the NPL trap,
+trapping potential of $w_z \approx 2\pi * 1.6$~MHz. This ion
+separation was chosen to reduce the cross talk between ions when
+singly addressed (see section X). We plan for around $5$~MHz for our
+radial frequencies as we will use one such mode for implementing
+two-qubit entangling gates. This higher frequency is for a few
+reasons. Firstly, the doppler cooling limit
+($\overline{n} = \Gamma/w$, where $\Gamma$ is the transition linewidth
+and $w$ is the frequency of the mode being cooled) goes with the
+reciprocal of the mode frequency and so higher mode frequencies leads
+to a lower temperature after cooling. Secondly, a higher c.o.m. radial
+mode leads to better separation of radial modes in a multi-ion crystal
+which, if we implement the amplitude pulse shaped fast gate scheme
+described above, can lead to pulse solutions with fewer segments. XX
+Thirdly, can push to faster gates?
+
+The radial mode frequency is given by
+$w_{rad}$ equation. \\
+Simulations of the NPL trap,
 we require an $\Omega_{RF} = XX20$~MHz with a driving amplitude of
 $180$~V to find a solution with axial frequency of 1.6MHz and a radial
 frequency $w_x = 5$~MHz.
+
 One foreseeable issue with this arrangement becomes apparant when
 considering the Matthiu equation representing trapping with
 pseudo-potential. There are areas of stability and instability which
@@ -639,18 +676,6 @@ intensity of XX which could drive CNulled gates at a speed of X.
 
 
 
-
-
-In a reductionist viewpoint, 
-Description of Blade and limitations Proof of principle experiments
-have been completed on Blade, a blade-style ion trap. Blade has a few
-limitations for the exploration of fast gates by the above described
-Cnulled method, motivating the design of a new system.  Blade has dual
-optical access of the ions however, only as 45 degrees to the chain
-axial direction. Only global laser addressing of the chain is possible
-limiting the intensity seen at the ion. The simpler blade style trap,
-has limited control over creation of electric potentials meaning
-shuttling of ions is not practical.
 
 
 subtitle FastGates Apparatus\\

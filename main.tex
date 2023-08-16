@@ -225,7 +225,7 @@ H = Carrier + eta*SB
 %}}}
 
 %Results and Discussion {{{
-\section{Results and Discussion}
+\section{Carrier Nulling Results}
 
     Excerpts from carrier nulling paper kind of want to put this after the FG description... Or could I shorten this massively to reduce emphasis?\\
     
@@ -408,8 +408,6 @@ H = Carrier + eta*SB
 %Experimental Details {{{
 \section{Experimental Details}
 
-\subsection{Ion Trapping Apparatus}
-
 The technical complexity of ion trapping experiments may be reduced to
 solving two problems: Controlling the state of the ion (both internal
 and motional); and controlling the environment the ion is within.
@@ -422,17 +420,19 @@ too do the capabilities and scope of our apparatus.  Here we shall
 describe both the ``old'' apparatus, known in short as ``Blade'', where
 proof of principle fast gate schemes have been tested, and the new
 proposed system, known as ``FastGates'', which solves critical
-limitations of ``Blade'' for further exploring fast gates.
+limitations of ``Blade'' for further exploring fast entanglement and
+non-adiabatic interactions.
 
 \subsection{Ion and Trap}
+
+XX Table comparing appropriate dims/freqs/pots of three traps XX\\
 
 As mentioned, the overall system we desire is a spin coupled to a
 spring. Our spin in this case being a Hydrogen-like ion, and the
 spring being the harmonic motion of the ions within the trapping
 potential. The ion traps we use to create such a potential are linear
 Paul traps, a schematic of such is shown in FigureX. As explained by
-Earnshaw's theorem,
-$$\del^2 V = 0,$$
+Earnshaw's theorem, $(\nabla^2 V = 0),$
 a stable stationary point in 3D can not be realized using a static
 electric potential, $V$, as if the potential is confining in 2
 dimensions, it will be anticonfining in the third. Therefore to
@@ -587,39 +587,44 @@ All of the above systems are Toptica Diode lasers coupled to a cavity
 for PDH locking.
 
 
-\subsection{The vacuum system}
+\subsection{Inside the vacuum}
 
 Here we shall describe the instrumentation required, and being
 constructed, for decouping the ion from any unwanted external
 environments. Our primary tools for this are working under Ultra High
-Vacuum (UHV) < $10^{-11}$ mbar, and using electro magenetic
-shielding. The UHV system consists of a main experimental chamber
-comprised of a CF100 Octagon and pumps. For UHV, we use protocols
-described in XXX and must use appropriate materials within the
-chamber. Note, as mentioned the NPL trap is a microfab 3D trap, our
-ion therefore is located between the two planes within a slit. the 729
-system requires High optical access for single addressing (see below)
-and this limits the available entry points of the remaining beams. We
-therefore are using in vacuum prisms to bounce the light into the
-slit. We must use vacuum compatible glues and coatings of the
-prisms. Figure X shows an image in the cleanroom of the prisms in our
-system.
-Also in the system:
-Oven with thermocouple.
-Trap PCB with filter capacitors.
-Cabling to both.
-Interposer between trap and PCB, using fuzz buttons.
-Now pump system:
-attached ion pump,
-Ti:Sublimation pump,
-Ion Gauge
-Valve to connect to external pump system
+Vacuum (UHV) and surrounding the vacuum system with electromagnetic
+shielding. Inside the vacuum system we aim for a residual pressure of
+less than $10^{-11}$ mbar. To reach this low a pressure, we must take
+care in material choice and thoroughly clean and bake all material
+within the vacuum system (a useful summary of tactics can be found in [ref]).
 
-design considerations and 
+A schematic of the vacuum system can be seen in figure X. The system
+consists of an octagonal experimental chamber connected to an Ion
+pump, Ion Gauge and Ti:Sub pump. For optical access we have Dual CF100
+viewports coated for 397 nm and 729 nm as well as two CF40 viewports
+coated for 397 nm, 422 nm, 729 nm, 854 nm and 866 nm.
 
-MuMetal shielding to suppress external magnetic fields. Using XX3mm
-thick two layer system with a quoted magnetic field reduction of 100.
+As discussed above, our ion will be located within a slit of the NPL
+trap and so there is no visibility of the ions from the side CF40
+viewports. We therefore are using in vacuum prisms to direct the light
+onto the ions at XX degrees.
 
+We use an electrical feedthrough on a CF40 flange to supply our trap
+chip with both DC and RF voltages. As the DC cables run within close
+proximity to the RF supply, electrical pick up is a potential issue
+within our DC lines. We mitigate this through a low pass filter board
+within close proximity of the trap chip. We implement a ``trap
+stack'', seen in figure X, within the vacuum chamber consisting of the
+trap chip, the outer chip carrier, an interposer, and the filter PCB.
+
+\textsuperscript{+}Ca\textsubscript{40} was chosen for zero nuclear
+spin and therefore simple energy level structure. However we now
+cannot utilize hyperfine structure to find ``clock'' qubits which are
+insensitive to magnetic field fluctuations and must instead remove
+magnetic field noise from the environment. To suppress this noise 
+we place the vacuum chamber within a box constructed from two layers
+of 3mm thick MuMetal [ref]. The shielding was shown to suppress the
+background field by a factor of 500 at its center.
 
 \subsection{Single Addressing}
 
@@ -664,19 +669,10 @@ system through the prisms if all ions need to be addressed. Quick
 power calculation though means we still have XXmW at each ion with an
 intensity of XX which could drive CNulled gates at a speed of X.
 
-
-
-
-
 %% Assuming our trapping potential to be quadratic, we have a spin system
 %% coupled to a spring. The Jaynes Cummings Hamiltonian,
 %% $$ H = H_{spin} + H_{HO} + H_{Int}, $$
 %% summarises this coupled system.
-
-
-
-
-
 
 subtitle FastGates Apparatus\\
 *This has been (to be) incorportated into the above section. \\

@@ -534,35 +534,64 @@ experiment.
 
 We have described the trapping of an ion, now we must look at our
 strategies for manipulating the internal states and collective motion
-of ion strings. Our key tool for this is the use of lasers as we can
-create highly localised, strong electric field amplitudes and
-gradients. Coupling to spin: carrier interaction, Rabi flopping, pi
-pulses. Coupling to motion: description of sidebands.
-Figure X shows the energy level structure of Ca40+, note the plethora
-of available transitions available to realize the control over our ion
-strings. Here we describe what transitions we have chosen for what
-task.
-Figure X shows the entry points of the laser systems into the trap
-chamber.
+of ion strings. Lasers are a key tool for this as highly localised,
+strong electric fields amplitudes and gradients can be produced.
 
-729 - Coherent control
-We will use the optical S->D state with the 729 quadrupole transition
-to define our qubit due to the D state being a metastable state:
-i.e. the transition from D to S is dipole forbidden as they are the
-same parity DelL != +-1. The lifetime of this state is ~X700 ms,
-giving a greater upper bound of the qubit coherence time than if a
-dipole transition is used. This long lived state means that it is a
-narrow linewidth transition (Heisenberg uncertainty) and so we must
-use a narrow linewidth laser to efficiently control.  High power
-required as lamb dicke factor is low for 729 transition.  We use a
-pumped Ti:Saph system coupled to a high finesse cavity to achieve
-this.  Verdi 532 -> Solstis 729 PDH locking with Stable laser systems
-lock box. Below a schematic of our 729 laser system is
-shown. Strontium is used in Blade apparatus and has all analogous
-transitions. Here our quadrupole transition is at 674 nm.  FNC to
-cavity and to laser lab. Power stabilization on the feedback AOM. High
-bandwidth PID feedback loop pushing the servo bump away from area of
-experimental interest. Acoustic isolation using foam insulated box.
+First let us consider the \superscript{40}Ca\superscript{+} energy
+level structure, figure X. The \superscript{40}Ca\superscript{+} has
+no nuclear spin and is hydrogen like with only one external electron
+giving a (relatively) simple level structure. An external magnetic
+field of $5$ G is applied to Zeeman split the levels. The relevant
+laser transitions for our planned ion trap experiment have been marked
+and their purpose and construction shall be discussed below.\\
+
+729 nm - Coherent control: As shown in figure X we will use the levels
+4S\textsubscript{1/2} to 3D\textsubscript{5/2} with a 729 nm
+quadrupole transition to define our qubit. Therefore the 729 nm laser
+is used to implement single and multiqubit gates. We also use this
+transition, after doppler cooling, for resolved sideband cooling to
+step down to near the motional ground state of the ion crystal.
+
+The natural lifetime of the metastable
+3D\textsubscript{5/2} is around 1.1 s XrefBarton, giving a favorable
+fundamental limit of coherence time for our chosen qubit.
+%% i.e. the transition from D to S is dipole forbidden as they are the
+%% same parity DelL != +-1.
+This natural lifetime leads to a narrow 4S\textsubscript{1/2} to
+3D\textsubscript{5/2} transition linewidth $\Gamma < 1$~Hz, and so
+demands the use of a narrow linewidth laser. Further, we require a
+high light intensity at the ion to drive sideband transitions due to a low
+Lamb-Dicke factor for 729 transition, $\eta \approx 0.05$.
+Pumped Ti:Saph laser systems have been shown to be both relatively
+high power and narrow linewidth, making them suitable for our
+experiment.
+
+We pump an M2 Solstis Ti:Saph with 15 W of 532 nm light from a Verdi
+system to produce around 4W of 729 nm light.  A schematic of the 729
+nm system being built is shown in figure X. The frequency is
+stabilized by the Pound-Drever-Hall (PDH) technique with a high
+finesse cavity. PDH locking requires taking the laser light and
+applying two sidebands via an electro-optical modulator (EOM). This
+phase modulated light is then directed onto a stable cavity and a
+reflected signal is directed onto a fast photodetector. The reflection
+from the cavity consists of the interference between the carrier and
+the sidebands which have been respectively altered by the cavity
+transfer function. The photodetector signal is mixed down with the
+same oscillator signal as provided to the EOM but delayed by some
+phase, and finally low pass filtered to produce a signal for use as
+the error signal in the servo loop.  This error gives a measure for
+how far the carrier frequency is from the stable cavity resonant
+frequency and is used for feedback onto the control AOM situated after
+the Solstis.
+
+Some of the 729 nm light is picked off and sent to a wavemeter to
+monitor the frequency however the majority is coupled to two output
+fibres for our experiment and another within the group. We require
+fibre noise cancellation as we transport the 729 light from a laser
+lab to the trapping lab by a 10 m single mode polarization maintaining
+fibre and must ensure no phase noise is introduced.
+
+
 Trial of Verdi C unsuccesful so far not achieving stable lasing with
 solstis.
 Improvements over Blade:

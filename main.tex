@@ -227,27 +227,91 @@ H = Carrier + eta*SB
 %Results and Discussion {{{
 \section{Carrier Nulling Results}
 
-    Excerpts from carrier nulling paper kind of want to put this after the FG description... Or could I shorten this massively to reduce emphasis?\\
-    
-    As discussed in sectionXX, the use of phase-stable standing waves (SW) is a clear route to fast entangling gates on quadrupole transition qubits. 
-    Here we report experimental results of both SW single qubit gates and SW Molmer Sorensen (MS) entangling gates performed on the Blade apparatus.\\
+    As discussed, the use of phase-stable standing waves (SW) is a
+    clear route to fast entangling gates on quadrupole transition
+    qubits.  Here we report experimental results of both SW single
+    qubit gates and SW Molmer Sorensen (MS) entangling gates performed
+    on the ``Blade'' apparatus.\\
 
-    We use a free-space, phase-stabilized SW formed by two
-    superimposed counter-propagating 674-nm beams that couple to the
-    quadrupole qubit transition, 5S1/2 ↔ 4D5/2, in 88Sr+.\\
+    Experimentally, the SW is formed by two superimposed
+    counter-propogating 674-nm beams and directed onto the
+    ions. 674-nm light couples to the quadrupole qubit transition,
+    5S1/2 ↔ 4D5/2, in 88Sr+. The beams propogate in free-space and are
+    phase-stabilized to ensure the SW is stationary with respect to
+    the ion. Figure X displays the path of the two counter-propagating
+    beams. AOMs are present in each branch as a switch, to apply
+    sideband frequencies, and to control the phase of the beams. Light
+    from each branch is picked off onto a fast photodetector to infer
+    what phase corrections to feedback onto the AOMs. A slower
+    secondary stabilization step is applied using the ion as a
+    sensor. The ion is situated at what is believed to be a node of
+    the SW and $\pi/2$ pulses on branch 1 and then immediately on
+    branch 2 are applied.  This Ramsey like sequence gives a signal
+    sensitive to the difference in phase between the two pulses, and
+    may be used as an error signal to also feedback onto the control
+    AOMs.\\
 
-    **Here quadrupole so gradient couples carrier whilst XXCurlXX couples the sideband interaction\\.
+    To validate the stability and phase dependent coupling of sideband
+    and carrier, single-qubit gates are both utilized and
+    benchmarked. An efficient $\pi$-pulse is achieved by setting the
+    SW to be on resonance with the qubit transition and by placing a
+    SW node at the ion.\\
 
-    The single-qubit gate is created using a monochromatic SW on
-    resonance with the qubit transition while placing the node(s) of
-    the SW at the position of the ion(s). The two-qubit entangling gate
-    is implemented via an MS-type scheme where we use a bichromatic SW
-    instead of the conventional bichromatic TW.\\
+    Figure X shows the dependence of carrier coupling with phase of
+    the SW seen by the ion. A monochromatic SW pulse on resonance with
+    the qubit transition is applied. The pulse duration corresponds to
+    a π-pulse at maximum carrier coupling, which occurs at the nodes
+    of the SW. For an electric quadrupole transition, the maximum
+    carrier coupling occurs at the maximum gradient of the electric
+    field [9]. We can maximize the carrier coupling and minimize the
+    sideband coupling, or vice versa, by selecting ∆φ = π or ∆φ = 0
+    [Fig. 2(b)]. The transfer probability shown in Fig. 2(a) has a
+    quartic dependence on ∆φ near ∆φ = π and a quadratic dependence at
+    ∆φ = 0 [26]. When probing the suppressed motional sideband
+    [Fig. 2(b) left], we observe only features that are due to the
+    off-resonant (by ≈ 1.2 MHz) carrier coupling. By changing ∆φ of
+    the SW, we can realise any ratio between carrier and sideband
+    coupling.\\
 
-    Using the
-    SW-MS instead, with the anti-nodes placed at the ions, we strongly
-    suppress the undesired carrier term and show that we can surpass
-    this speed limit.\\
+    High fidelity unitary operations (gates) are essential for both
+    near intermediate scale quantum computing [x] and for reducing
+    overheads in required physical qubits and operations in
+    fault-tolerant schemes [x]. To evaluate whether the phase
+    stability of our SW is sufficient for high fidelity gates, we
+    employ randomized benchmarking (RBM) [32].  RBM consists of
+    applying random combinations of a pre-chosen discrete set of gates
+    to estimate an average error per gate.  We chose the one-qubit
+    Clifford group as our set of gates to evaluate. The one-qubit
+    Clifford group is the set of unitaries which map the Pauli
+    matrices to one another through conjugation. There are 24
+    unitaries total in this set. We followed the RBM protocol
+    described in the Thesis [x] to evaluate our SW single qubit
+    gates. First the qubit is prepared in some known initial state,
+    i.e. prepared in some chosen basis. A gate sequence is then
+    applied which consists of multiple random Clifford gates followed
+    by a final `inverting' gate such that the full sequence performs
+    the Identity operation plus some error. The state is then measured
+    in the same basis. This is repeated with the same preparation and
+    sequence multiple times to calculate the probability that the
+    Identity was performed, known as the sequence fidelity. These
+    steps are repeated for many different random sequences with a
+    range of sequence lengths. The sequence fidelity versus number of
+    Clifford performed has now been found and a decay model is fitted
+    to find the both the error per Clifford and the state preparation
+    error.\\
+    Using this method we compared the single-qubit gate errors when
+    utilizing either standing or travelling waves. We obtained an error of
+    $1.44(3) \mult 10^{−3}$ and $1.73(3) \mult 10^{−3}$ per Clifford
+    gate for the SW and TW single qubit gates, respectively. Thus, use
+    of the SW is not detrimental to single-qubit gate fidelity. Due to
+    spin dephasing of our quadrupole qubit originating both from
+    natural lifetime and external noise, we ensured that the duty
+    cycle and Rabi frequency of both SW and TW RBM experiments were
+    the same. \\
+
+
+
+
 
     %% ******************* Appendix? ****************
     %% * Could shift these derivations to the intro. \\
@@ -278,25 +342,6 @@ H = Carrier + eta*SB
 
     %% ***********************************************
 
-    **Look at poster for description of phase feedback onto the ion -
-    maybe exclude this to shorten section.\\
-
-    still to tidy Results: \\
-    We probe the position of the SW relative to a single ion by applying a
-    monochromatic SW pulse on resonance with the qubit transition
-    [Figs. 1(b), 2(a)]. The pulse duration corresponds to a π-pulse at
-    maximum carrier coupling, which occurs at the nodes of the SW. For an
-    electric quadrupole transition, the maximum carrier coupling occurs at
-    the maximum gradient of the electric field [9]. We can maximize the
-    carrier coupling and minimize the sideband coupling, or vice versa, by
-    selecting ∆φ = π or ∆φ = 0 [Fig. 2(b)]. The transfer probability shown
-    in Fig. 2(a) has a quartic dependence on ∆φ near ∆φ = π and a
-    quadratic dependence at ∆φ = 0 [26]. When probing the suppressed
-    motional sideband [Fig. 2(b) left], we observe only features that are
-    due to the off-resonant (by ≈ 1.2 MHz) carrier coupling. By changing
-    ∆φ of the SW, we can realise any ratio between carrier and sideband
-    coupling.\\
-
 
     %% We measure Rabi frequencies by scanning the SW pulse
     %% duration at the carrier resonance, for both ∆φ = π and ∆φ = 0. We
@@ -314,12 +359,6 @@ H = Carrier + eta*SB
     %% measured interferometric stability and the residual power imbalance
     %% between b1 and b2.\\
 
-    Expand this section and show some data of RBM results:\\
-    Furthermore, we perform randomized benchmarking [32] to evaluate
-    the quality of single-qubit gates implemented using the SW and TW
-    with the same duty cycle. We obtain an error of 1.44(3) × 10−3 and
-    1.73(3) × 10−3 per Clifford gate, respectively. Thus, use of the
-    SW is not detrimental to single-qubit control. \\
 
     %% This has a lot of experimental detail. Maybe too much for the report.\\
     %% Next, we experimentally investigate the saturation effect caused
@@ -343,6 +382,12 @@ H = Carrier + eta*SB
     %% speed-limit exists. We place the ion at the maximum intensity of
     %% both the red- and the blue-detuned SWs [26] and observe that the
     %% interaction magnitude [34] increases linearly with Ω (Fig. 3).\\
+
+    To explore the carrierThe two-qubit entangling
+    gate is implemented via an MS-type scheme where we use a
+    bichromatic SW instead of the conventional bichromatic TW. To
+    selectively couple to the sidebands, and hence suppress the carrier term, the antinodes
+    of the SW are placed at the ions.\\
 
     We experimentally demonstrate two-qubit MS gates using a bichromatic
     TW for gate speeds in a regime where the carrier coupling induces a
@@ -442,6 +487,8 @@ non-adiabatic interactions.
 \end{figure}
 
 XX Table comparing appropriate dims/freqs/pots of three traps XX\\
+COMET surface trap: depth = 59 meV. Ions sit at a distance d = 75 μm.\\
+BLADE The trap depth for the blade trap is approximately 100 times that of the planar trap (∼ 1 eV).\\
 
 As mentioned, the overall system we desire is a spin coupled to a
 spring. Our spin in this case being a Hydrogen-like ion, and the

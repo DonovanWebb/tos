@@ -875,25 +875,53 @@ Still Under Construction \\
   \label{fig:AOD}
 \end{figure}
 
-729 High NA (0.6) lens we can achieve waist radius of < 1 um.  With
-our axial trap freq of $1.6$~MHz we get ion spacing of ~ 5um.  Using AOD
-system we can traverse this ion chain.
+A unique feature of our system is the ability to produce standing wave
+single ion addressing. The design of this system is shown in
+Figure~\ref{fig:AOD}.  A single ion addressing system must be able to
+illuminate selected ions in the crystal whilst the others remain
+unperturbed.
+
+Our ions are separated by a distance $d\approx 5~\mu$m. For an ideal
+gaussian beam waist radius of the $\omega_0 = $1~$\mu$m, the Electric
+field intensity cross talk to a neighbouring ion will be $1\mult
+10^{-11}$. To produce this beam waist we must ensure we are not
+diffraction limited.  Focussing a collimated beam with an objective
+lens of 0.6 onto the ion provide $\omega_0 = 386$~nm for
+$\lambda=$~729-nm light. The lens edges diffract the spots and
+abberations present in real optical components cause our spot to be
+non-gaussian and increase the cross talk seen at the neighbouring
+ions. Therefore care is taken in the optical design.
+
+To illuminate selected ions we steer an input beam using
+Acousto-Optical-Deflectors (AODs)[ref], where the angle deflected is
+proportional to the drive frequency supplied to the AOD. Multiple
+output beams can be formed by supplying multiple RF tones to the AOD.
+We require the beam wave vectors to be
+parallel with the radial mode direction of the ion crystal. This
+requirement ensures that we drive motion on the radial modes
+exclusively. Therefore after the AODs we convert this angular
+separation of beams to distance separation using a telecentric scan
+lens (Figure~\ref{fig:AOD} L1).
+This scan lens and L2 form a telescope to expand the beam before the
+high NA objective.
+
+This single addressing system is implemented on both sides of the UHV
+chamber to form counterpropogating beams at the ion location. AODs are
+an ideal choice for creating standing wave as the location the waist
+is formed at the ion chain can be finely tuned by varying the AOD RF
+drive. Furthermore, the phases of two beams formed by the AODs can be
+controlled independently by varying the phases of the respected RF
+drives. This allows control over the phase of the standing wave each
+single addressed ion is subject to.
+
+
+
 \begin{itemize}
-\item Description of lens system from AOD to ions.
-\item Description on the mechanism on how AOD works (this is the same
-  as an AOM) (Probably skip this).
-\item Comparison between this and a fixed waveguide array.
-AOD have extra programmable control than waveguides which is
-excellent as we are in an exploratory regime where we may want to
-alter ion spacing/Dont want to use quartic potentials to make ions
-evenly spaced.
 There is minimal path length difference compared to waveguide which is
 ideal as we can stabilise at some central frequency and should be
 stable at all ion locations.
 \item We will use a crossed AOD design so that we have no overall frequency
 shift as we scan along the ion chain.
-\item Compact design to fit beam path within MuMetal box. (Probably skip this).
-\item Using two RF freq so that we can address two ions at the same
 time. Comes at cost of power due to cross terms.
 \end{itemize}
 

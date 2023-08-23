@@ -722,11 +722,12 @@ $$\omega_{rad\pm} = \sqrt{\omega_p^2 - (1\mp\beta)\omega_{ax}^2/2},$$
 where $\beta$ is some factor due to the geometry of this cross arrangement. From simulation $\beta > 1$ for $\Omega_{RF} = 2\pi\cdot 23$~MHz and $V_{RF} = 200$~V and so one radial mode increases with DC voltage applied and one decreases as can be seen in figureX.
 \begin{table}[h!]
 \begin{center}
-\begin{tabular}{ c|c c c c c c }
-   & $V_{RF}$ / V & $\Omega_{RF}$ / ($2\pi\cdot$MHz)& $V_{DC}$ / V & $\omega_{ax}$ / ($2\pi\cdot$MHz) & $\omega_{rad}$ / ($2\pi\cdot$MHz) & q \\ 
+\begin{tabular}{ c|c c c c c }
+   & $V_{RF}$/V &  $V_{DC}$/V &$\Omega_{RF}$/($2\pi\cdot$MHz)& $\omega$/($2\pi\cdot$MHz)   & q \\ 
+   &  &  & & $\omega_{ax}$\quad   $\omega_{rad}$ &  \\ 
   \hline
-  Experiment  & 200 & 23 & -7 & 1.6 & 4.9 & 0.61 \\
-  Loading  & 100 & 23 & -2 & 0.8 & 2.0 & 0.25 \\
+  Experiment  & 200 & -7 &  23 & 1.6 \quad 4.9 & 0.61 \\
+  Loading  & 100 & -2 &  23 & 0.8 \quad 2.0 & 0.25 \\
 \end{tabular}
 \caption{ Simulated parameters for both ``Experiment'' and ``Loading'' settings \textsuperscript{40}Ca\textsuperscript{+} with the NPL trap.
   }
@@ -746,10 +747,6 @@ frequencies.
 
 \subsection{Laser systems}
 
-Lasers are a key tool for creating the highly localised, strong
-electric field amplitudes and gradients needed to drive both carrier
-and sideband transitions of the trapped ion.\\
-
 
 \begin{figure}
   \begin{center}
@@ -759,6 +756,9 @@ and sideband transitions of the trapped ion.\\
   \label{fig:729}
 \end{figure}
 
+Lasers are a key tool for creating the highly localised, strong
+electric field amplitudes and gradients needed to drive both carrier
+and sideband transitions of the trapped ion.\\
 As shown in FigureX we will use the levels
 4S\textsubscript{1/2} to 3D\textsubscript{5/2} with a 729-nm
 quadrupole transition to define our qubit. Therefore the 729-nm laser
@@ -862,11 +862,6 @@ within close proximity of the trap chip.
 
 \subsection{Single Addressing}
 
-\begin{center}
-Still Under Construction \\
-\end{center}
-\hrule\vspace{1em}
-
 \begin{figure}
   \begin{center}
    \noindent\includegraphics[width=\linewidth]{figures/vac_can_AOD_small.pdf}
@@ -879,12 +874,15 @@ A unique feature of our system is the ability to produce standing wave
 single ion addressing. The design of this system is shown in
 Figure~\ref{fig:AOD}.  A single ion addressing system must be able to
 illuminate selected ions in the crystal whilst the others remain
-unperturbed.
+unperturbed. The advantage of single addressing, other than ion
+selectivity, is the intensity of light due to the tight waist as the
+ion location. This high intensity will enable a greater SDF and thus
+faster gates.
 
 Our ions are separated by a distance $d\approx 5~\mu$m. For an ideal
-gaussian beam waist radius of the $\omega_0 = $1~$\mu$m, the Electric
-field intensity cross talk to a neighbouring ion will be $1\mult
-10^{-11}$. To produce this beam waist we must ensure we are not
+Gaussian beam waist radius of the $\omega_0 = $1~$\mu$m, the Electric
+field intensity cross talk to a neighbouring ion will be
+$1\times 10^{-11}$. To produce this beam waist we must ensure we are not
 diffraction limited.  Focussing a collimated beam with an objective
 lens of 0.6 onto the ion provide $\omega_0 = 386$~nm for
 $\lambda=$~729-nm light. The lens edges diffract the spots and
@@ -893,7 +891,7 @@ non-gaussian and increase the cross talk seen at the neighbouring
 ions. Therefore care is taken in the optical design.
 
 To illuminate selected ions we steer an input beam using
-Acousto-Optical-Deflectors (AODs)[ref], where the angle deflected is
+Acousto-Optical-Deflectors (AODs)[ref Warren Nagourney], where the angle deflected is
 proportional to the drive frequency supplied to the AOD. Multiple
 output beams can be formed by supplying multiple RF tones to the AOD.
 We require the beam wave vectors to be
@@ -906,74 +904,64 @@ This scan lens and L2 form a telescope to expand the beam before the
 high NA objective.
 
 This single addressing system is implemented on both sides of the UHV
-chamber to form counterpropogating beams at the ion location. AODs are
+chamber to form counter-propogating beams at the ion location. AODs are
 an ideal choice for creating standing wave as the location the waist
-is formed at the ion chain can be finely tuned by varying the AOD RF
+is formed along the ion chain can be finely tuned by varying the AOD RF
 drive. Furthermore, the phases of two beams formed by the AODs can be
 controlled independently by varying the phases of the respected RF
-drives. This allows control over the phase of the standing wave each
-single addressed ion is subject to.
+drives. This allows control over the phase of each singly addressed
+standing wave.\\
 
+%}}}
 
-
-\begin{itemize}
-There is minimal path length difference compared to waveguide which is
-ideal as we can stabilise at some central frequency and should be
-stable at all ion locations.
-\item We will use a crossed AOD design so that we have no overall frequency
-shift as we scan along the ion chain.
-time. Comes at cost of power due to cross terms.
-\end{itemize}
-
-%% However addressing multiple ions at the same time comes at the cost of
-%% photon freq cross terms i.e. spots that we dont want that are off
-%% plane to our ions. This has two bad effects: Can get crosstalk to
-%% other ions on the chain and lose power in our 729 system. First effect
-%% we can mitigate by putting AOD at a > 45 deg angle (60 deg?) this
-%% pushes the unwanted spots further from the chain. (sep to ion is
-%% sqrt2/2 when at 45 deg). There is no easy way to mitigate the power
-%% loss as two freq photons are barely distinguishable (maybe look again
-%% at the two wavelength design aods). So this may limit us to only
-%% addressing 2 or three ions at a time and using a global addressing
-%% system through the prisms if all ions need to be addressed. 
-
-%% Assuming our trapping potential to be quadratic, we have a spin system
-%% coupled to a spring. The Jaynes Cummings Hamiltonian,
-%% $$ H = H_{spin} + H_{HO} + H_{Int}, $$
-%% summarises this coupled system.
-
-%% subtitle FastGates Apparatus\\
-%% *This has been (to be) incorportated into the above section. \\
-
-%% Here we describe the design of the new ``FastGates'' system which is
-%% tailored for the exploration of fast, non-adiabatic entangling
-%% gates. Figure X shows a schematic of the vacuum can of ``FastGates''
-%% with the addressing directions and magnetic field highlighted. Ca40
-%% was chosen for initial experiments due to its simple energy level
-%% structure, figure X, without hyperfine levels and with the option for
-%% a quadrupole qubit between the S and D levels. An external magnetic
-%% field of 5G is applied to define our Zeeman sublevels, this low field
-%% will not allow state selective addressing by frequency, however allows
-%% for polarization selective addressing. *** Check if 729 will actually
-%% have linewidth for frequency addressing? *** The isotope having 0
-%% nuclear spin and hence no hyperfine levels greatly simplifies control
-%% schemes however precludes the option of using magnetically insensitive
-%% ``clock'' qubits. To ensure we do not greatly limit coherence time of
-%% our quadrupole transition we use a MuMetal enclosure to suppress stray
-%% environmental magnetic fields.
-
+%Conclusion {{{
+\section{Conclusion}
+We presented experimental results for using standing waves to
+implement Molmer-Sorensen entangling gates where errors due to the
+carrier term are suppressed. These experiments were conducted using a
+previous apparatus, which served as a platform for proof-of-principle
+work. However, this setup has inherent limitations related to gate
+duration due to laser power availability and the constraint of global
+ion addressing.
+Therefore, a new ion trap apparatus, with the unique capability of
+single ion addressing using standing waves, is described and design
+choices are motivated. This system will allow further studies on high
+fidelity fast entangling operations which are a critical component of
+realizing a useful NISQ device.
 
 %}}}
 
 %Outlook {{{
 \section{Outlook}
-\begin{itemize}
-    \item Current state of building up apparatus.
-    \item Immediate next steps.
-    \item Proposed first experiments?
-    \item GANNT diagram?
-\end{itemize}
+We have fully assembled the trap chamber and it is ready to be placed
+in the trapping laboratory.  Beam paths for 397-nm, 854-nm, 866-nm and
+the PI system are completed.
 
+In the next 6 months we will build up the optics around the trap
+chamber to direct light onto the ions and build up control hardware
+and software for trapping. We should be able to trap at this point and
+start to characterize our system and calibrate the trapping to reduce
+micromotion.
+
+Further we will complete work on the 729-nm system which is currently
+delayed due to a faulty Verdi pump system. To characterize the 729-nm
+system we will benchmark the fidelity of single-qubit gates by
+globally addressing a single ion.
+
+Once the system has an acceptable single-qubit error
+(~$1\times10^{-3}$), we will be ready to assemble the single ion
+addressing system described above. Standing wave single ion addressing
+on multi-ion chains would likely be a suitable topic for a technical
+paper on methods and to report on crosstalks and gate fidelities.
+
+Work would then transition to implementing carrier suppressed MS gates
+on multi-ion crystals, replicating the results from the proof of
+principle experiments. Finally, the high intensity of light using the
+single addressing system will enable the exploration of entangling
+operations at a rate comparable to the motional mode frequencies of a
+multi-ion chain.
+
+\vspace{2em}
 \hrule
 %}}}
   

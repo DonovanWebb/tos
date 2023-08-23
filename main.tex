@@ -108,31 +108,32 @@ University of Oxford}
 \begin{abstract}
 
     Scalable trapped-ion quantum computation relies on the development
-    of high-fidelity fast entangling gates in many ion crystals.
+    of high-fidelity fast entangling gates in many-ion crystals.
     %
-    Currently the speed of geometric phase gates are limited by either large
-    scattering errors (with Raman transitions) or off-resonant carrier
-    excitations (with quadrupole transitions).
+    Currently the speed of Molmer-Sorensen entangling gates is limited
+    by off-resonant carrier excitations which do not commute with the
+    neccessary sideband excitations.
     %
-    Utilizing standing waves offers a potential pathway to achieve
-    fast entanglement in quadrupole transitions due to suppressing
+    Standing waves formed by counter-propogating lasers offer a
+    potential pathway to achieve fast entanglement by suppressing
     undesired carrier excitations.
     %
-    Using a legacy apparatus we present initial results of this
-    carrier suppression in the~$674$-nm quadropole transition of
-    \textsuperscript{88}Sr\textsuperscript{+}. We demonstrate
-    fast two-qubit entangling gates which exceed the entangling ``speed
-    limit'' imposed by off resonant carrier excitations.
+    We present initial results of this carrier suppression in
+    the~$674$-nm quadropole transition of
+    \textsuperscript{88}Sr\textsuperscript{+}. We demonstrate fast
+    two-qubit entangling gates which exceed the entangling ``speed
+    limit'' imposed by non-commuting off-resonant carrier excitations.
     %
-    To explore these fast gates at durations comparable to the secular
-    trap frequency, and in multi-ion chains, a new system is been
-    constructed. This system will use a microfabricated, segmented 3D
-    Paul trap for greater control of long ion chains, and will feature
-    single ion addressing for both selective and high power coherent
-    operations. We will use \textsuperscript{40}Ca\textsuperscript{+}
-    which has a quadrupole transition of $729$-nm. We present the
-    current progress and roadmap of this next-generation platform and
-    motivations behind design choices.
+    To explore entangling operations at durations comparable to the
+    secular trap frequency we require high intensity laser
+    addressing. A new system is being constructed featuring standing
+    wave single ion addressing to generate these high intensities.  It
+    will also utilize a microfabricated, segmented 3D Paul trap for
+    greater control of long ion chains. We will use
+    \textsuperscript{40}Ca\textsuperscript{+} which has a quadrupole
+    transition at $729$-nm. We present the current progress and
+    roadmap of this next-generation platform and motivations behind
+    the design choices.
 
 \end{abstract}
 %}}}
@@ -238,7 +239,6 @@ resonant carrier coupling in the MS-interaction is suppressed.
 %% \end{itemize}
 %% \end{itemize}
 
-\hrule
     %% ******************  From paper  ************************\\
     %% For trapped ions, controlled light-matter interactions typically require
     %% carrier interactions that only couple the internal qubit states,
@@ -400,9 +400,10 @@ resonant carrier coupling in the MS-interaction is suppressed.
     respectively. Thus, use of the SW, and the added experimental
     complexity it entails, is not detrimental to single-qubit gate
     fidelity. Due to spin dephasing of our quadrupole qubit
-    originating both from natural lifetime and external noise, we took
-    care to ensure that the duty cycle and Rabi frequency of both SW
-    and travelling wave RBM experiments were the same. \\
+    originating from laser noise, external field noise and the natural
+    lifetime of the transition, we took care to ensure that the duty
+    cycle and Rabi frequency of both SW and travelling wave RBM
+    experiments were the same. \\
 
     %% ******************* Appendix? ****************
     %% * Could shift these derivations to the intro. \\
@@ -605,32 +606,43 @@ fast entanglement.
 \end{figure}
 
 \subsection{Ion}
-We use alkali like ions (Group 2 elements) due to their single outer electron with Hydrogen-like energy levels. For ``FastGates'' we will use $^{40}$Ca$^+$
+Singly-charged Group 2 elements are popular in ion trap
+experiments due to their single outer electron with Hydrogen-like
+energy levels. For ``FastGates'' we will use $^{40}$Ca$^+$.
 
-First let us consider the \textsuperscript{40}Ca\textsuperscript{+} energy
-level structure, figure X. The \textsuperscript{40}Ca\textsuperscript{+} has
-no nuclear spin and is hydrogen like with only one electron in the outer shell
-giving a (relatively) simple level structure. An external magnetic
-field of $5$ G is applied to split the levels via the Zeeman effect. The relevant
-laser transitions for our planned ion trap experiment have been marked
-and their purpose and construction shall be discussed below.\\
+\textsuperscript{40}Ca\textsuperscript{+} has
+no nuclear spin giving the
+(relatively) simple level structure shown in Figure X. An external
+magnetic field of $5$~G is applied to split the levels via the Zeeman
+effect. The relevant laser transitions for our planned ion trap
+experiment have been marked.
 
-The natural lifetime of the metastable
-3D\textsubscript{5/2} is around 1.1 s XrefBarton, giving a favorable
-fundamental limit of coherence time for our chosen qubit.
-This natural lifetime leads to a narrow 4S\textsubscript{1/2} $\Leftrightarrow$
-3D\textsubscript{5/2} transition linewidth $\Gamma < 1$~Hz, and so
-demands the use of a narrow linewidth laser, which is discussed in the \textit{Laser} subsection.
+A zero nuclear spin isotope of calcium was chosen due to this simple
+level structure without hyperfine splitting. The greater number of
+levels due to hyperfine splitting lead to more decay paths and
+therefore greater complications in both cooling and gate schemes.
+However, the combination of Zeeman and hyperfine splitting causes
+certain transitions, known as ``clock''-qubits, to be robust against
+magnetic field fluctuations. Our lack of ``clock''-qubit for initial
+experiments will be mitigated by suppressing field fluctuations using
+magnetic shielding constructed from two layers of 3~mm thick MuMetal
+[ref]. Further, to generate a stable 5~G field we use a permenant
+magnet array which has a lower temperature dependence on field
+strength than coils.
 
-\textsuperscript{40}Ca\textsuperscript{+} was chosen for zero nuclear
-spin and therefore simple energy level structure. However we now
-cannot utilize hyperfine structure to find ``clock'' qubits which are
-insensitive to magnetic field fluctuations and must instead remove
-magnetic field noise from the environment. To suppress this noise 
-we place the vacuum chamber within a box constructed from two layers
-of 3mm thick MuMetal [ref]. The shielding was shown to suppress the
-background field by a factor of 500 at its center. XXHow does this
-effect noise affecting decoherence? and shorten paragraph.
+%% The shielding
+%% was shown to suppress the background field by a factor of 500 at its
+%% center. XXHow does this effect noise affecting decoherence? and
+%% shorten paragraph.
+
+The natural lifetime of the metastable 3D\textsubscript{5/2} is around
+$\tau =$~1.1~s XrefBarton, giving a favorable fundamental limit of coherence
+time for our chosen qubit.  This natural lifetime leads to a narrow
+4S\textsubscript{1/2} $\Leftrightarrow$ 3D\textsubscript{5/2}
+transition linewidth, $\Gamma = 1/\tau < 1$~Hz, and so demands the use of a
+narrow linewidth laser, which is discussed in the \textit{Laser
+  systems} subsection.
+
 
 \subsection{Trap}
 %% As mentioned in section 1, the overall system we desire is an internal electronic state of the ion coupled to its motion.

@@ -11,90 +11,6 @@
 %
 %}}}
 
-%Plan {{{ 
-% Title
-%% Make sure that I only talk about areas I am really interested in and want to talk about. 
-
-
-%% State of the art experimental apparatus for fast entangling gates in trapped multi-ion crystals
-
-%% 11 Page limit
-
-%% (Short) intro to trapped ion QC and Theory on Fast Gates schemes: ~ 2 pages
-
-%%     * Motivating why QC important. ~ 1 paragraph
-
-%%     * Trapped Ion QC - General idea of spin (ion) coupled with HO (Trapping potential) and how this satisfies QC requirements. ~ 1-2 paragraph
-
-%%     * Entangling gates MS gate. Statement of Hamiltonian and how this is experimentally realised. ~ 1 paragraph
-
-%%     * Fast Gate Schemes (Non-Adiabatic Entanglement). Amplitude shaped pulses. ~ 1 sentence and reference
-%%         Why we want to move to quadrupole optical transition rather than Raman (Scattering error and squeezing term)
-
-%%     * Carrier Nulling. (excerpt from paper starts) ~ 2 paragraphs
-
- 
-
-%% Experimental results from Carrier Nulling (excerpts from paper): ~ 2+ pages
-
-%%     * Description of Blade ~ 1 figure + 1 paragraph
-
-%%     * Phase control ~ 1 paragraph
-
-%%     * Proof of principle on Blade apparatus ~ 2 paragraph (statement of results) 2 figures
-
-%%     RBM work ~ few sentences
-
- 
-
-%% FastGates buildup: ~ 4 pages
-
-%%     * Motivation for why we want a new system (compare with Blade) ~ 1 paragraph
-
-%%     * Description of FastGates – central figure of full physical experiment and figure of control systems ~ 2 paragraphs large figure
-%%         In effect list all the benefits over Blade - and how it fits into requirements for NISQ?
-
-%%     Now looking at components of new system from center outward:
-
-%%     * Ca40 energy diagram  ~ 1 paragraph and energy level figure
-%%         Simple energy structure. Less spectator modes compared to Ca43 -> less off resonant transitions. But sensitive to B field.
-
-%%     * NPL trap, trap frequencies, substrate bias for crystal rotation ~ 1 paragraph 1 figure
-%%         What trap freq do we want for fast gates 
-
-%%     * In vacuum system details ~ 1 paragraph 1 figure
-
-%%     * Dual Optical Access High NA system ~ few sentences
-
-%%     * Single Ion Addressing with AOD, power requirements ~ 1 paragraph
-%%         This is potentially a drain of time – time bound looking into this.
-
-%%     * Addressing and Readout optics design? ~ short 1 figure
-
-%%     * Extension to standing wave single ion addressing – ideas/design for phase feedback ~ few sentences 1 figure?
-
-%%     * 729 system design, PDH locking, FNC ~ 1 paragraph
-
-   
-
-%% Outlook: ~ 1 page
-
-%%     * Overall goals of project
-%%         - Optical phase control of laser field at the ion.
-%%         - Fastgates on multi ion chain.
-
-%%     * Immediate tasks: Finishing vacuum work, trap on table. Trapping ions 
-
-%%     * Proposed first experiments? 
-%%         1st paper: EOM to keep stark shift the same as pulse amplitude changes 
-%%         Explore this for 1 day
-%%             Ask about scheme 
-%%             This is a problem with gates with multiple pulses. 
-%%                 Theory on this
-
-%% What will my next 6 months, 1 yr, 2 yrs look like? 
-%}}}
-
 %Opening{{{
 \begin{document}
 \title[]{State of the art experimental apparatus for fast entangling gates in trapped multi-ion crystals}
@@ -110,7 +26,7 @@ University of Oxford}
     Scalable trapped-ion quantum computation relies on the development
     of high-fidelity fast entangling gates in many-ion crystals.
     %
-    Currently the speed of Molmer-Sorensen entangling gates is limited
+    Currently the speed of M\o lmer-S\o rensen entangling gates is limited
     by off-resonant carrier excitations which do not commute with the
     neccessary sideband excitations.
     %
@@ -147,20 +63,20 @@ University of Oxford}
 
 Ion traps, specifically Paul and Penning traps[ref], have enabled the
 experimental exploration and corroboration of atomic and quantum
-theory, producing incredibly precise measurements such as XXclocks,
-relativity, g factorXX [clocks, relativity, g factor].\\ With the high
+theory, producing incredibly precise measurements such as clocks,
+relativity, g factor ref[clocks, relativity, g factor].\\ With the high
 degree of experimental control of a quantum system exhibited by ion
 trap systems, they are a promising and increasingly mature platform
 for enabling Quantum Computation (QC).\\ Errors in quantum logic gates
 due to noise and decoherence of the physical qubits are inevitable and
 limit algorithm circuit depths[ref]. With error correction schemes
-this depth can be greatly extended but at the cost of number of qubits
-and operations required, which at current scales is not practical.
+this depth can be greatly extended but requires a large overhead of qubits
+and operations, which at current scales is not practical.
 Noisy intermediate scale QC (NISQ) [ref], an alternative to error
 correted QC, is only practical when individual gate fidelities (1 -
 gate errors) are sufficiently low.  The ion trap platform is a leading
-candidate for NISQ with state-of-the-art fidelities of [XX] and [XX]
-for single- and two-qubit gates respectively[ref].  Entangling gates
+candidate for NISQ with state-of-the-art fidelities
+for both single- and two-qubit gates [ref].  Entangling gates
 are a neccessity for universal QC [ref], and also have applications in
 enhanced sensing and metrology [super-res, entangled clocks].  However
 the relatively long two-qubit entangling durations in ion traps limits
@@ -208,7 +124,7 @@ The duration of this applied spin dependent force is set so the
 motion returns to the original Fock state and the spin states
 acquire different phases, effectively transferring from
 spin-motion to spin-spin entanglement. One such implementation of
-this method, the Molmer-Sorensen gate (MS-gate), uses a
+this method, the M\o lmer-S\o rensen gate (MS-gate), uses a
 travelling bichromatic field of either lasers or microwaves
 detuned symmetrically from the qubit (carrier) resonance.
 The two fields off resonantly drive this motion (sideband
@@ -297,31 +213,32 @@ resonant carrier coupling in the MS-interaction is suppressed.
   \begin{center}
    \noindent\includegraphics[width=\linewidth]{figures/cnulled_figs.png}
   \end{center}
-  \caption{Carrier Null figs from [1] S. Saner and O. Băzăvan et al., `Breaking the
-    entangling gate speed limit for trapped-ion qubits using a
-    phase-stable standing wave'. arXiv, May 05, 2023.}
+  \caption{  Proof-of-principle experiments of using standing waves for single- and two-qubit gates\cite{Saner2023}.
+    \textbf{a)} A schematic of the beam path arrangement to form a standing wave at the ions. Incoming 674-nm light is split into two branches, $b1$ and $b2$. AOMs control the frequency and phase of these two branches. The light is directed onto the $^{88}$Sr$^+$ ions at an angle of $45^\circ.$ Picked off light from both branches interfere at a photodetector (PD) and an error signal is generated to phase stabilise the standing wave.
+    \textbf{b)} Single qubit random bench marking results for both travelling and standing waves. A decay model (solid line) is fitted to find both state-prep and Clifford gate errors.
+    \textbf{c)} The fidelity of MS entangling gates as gate duration is reduced. It can be seen that the travelling wave fidelity drops rapidly at short gate durations whilst the standing wave fidelity remains at 0.95.}
+
 
   \label{fig:cnull}
 \end{figure}
 
     Here, we report experimental results of both standing wave (SW)
-    single-qubit gates and SW Molmer-Sorensen
+    single-qubit gates and SW M\o lmer-S\o rensen
     entangling gates with the carrier term suppressed.\\
     These experiments were performed on our ``Blade'' apparatus which,
     although suitable for this proof-of-principle work, has hard
     limitations on what gate durations can be achieved due to
     available laser power and only global addressing of the ions.
     Section 3 will further discuss these limitations and the solution
-    in form of a new ion trap apparatus.\\
+    in the form of a new ion trap apparatus.\\
 
     On ``Blade'' the SW is formed by two superimposed
     counter-propagating 674-nm beams and directed onto the ions at an
-    angle of $45\degree$ to the ion chain. 674-nm light couples to
+    angle of $45\degree$ to the ion chain, Figure~\ref{fig:cnull}~(a). 674-nm light couples to
     the quadrupole qubit transition, 5S$_{1/2}$ $\Leftrightarrow$
     4D$_{5/2}$, in $^{88}$Sr$^+$.  The beams propagate in free-space
     and are phase-stabilized to ensure the SW is stationary with
-    respect to the ion. Figure~\ref{fig:cnull}~(a) displays the path
-    of the two counter-propagating beams. AOMs in both branches are
+    respect to the ion. AOMs in both branches are
     used as switches, to apply sideband frequencies, and to control
     the phase of the beams.\\
     %% Light
@@ -361,12 +278,11 @@ resonant carrier coupling in the MS-interaction is suppressed.
     %% coupling.\\
 
 \subsection{Random Benchmarking}
-%XX Add figure
 
     High fidelity unitary operations (gates) are essential for both
     near intermediate scale quantum computing and for reducing
     overheads in required physical qubits and operations in
-    fault-tolerant schemes [x]. To evaluate whether the phase
+    fault-tolerant schemes [ref]. To evaluate whether the phase
     stability of our SW is sufficient for high fidelity gates, we
     employ randomized benchmarking (RBM) [32].  RBM consists of
     applying random combinations of a pre-chosen discrete set of gates
@@ -382,7 +298,7 @@ resonant carrier coupling in the MS-interaction is suppressed.
     single-qubit gates. First the qubit is prepared in some known
     initial state, i.e. prepared in some chosen basis. A gate sequence
     is then applied which consists of multiple random Clifford gates
-    followed by a final `inverting' Clifford such that the full
+    followed by a final `inverting' Clifford, where the `inverting' Clifford is chosen such that the full
     sequence performs the Identity operation. The state is then
     measured in the same basis to find any deviations from the
     Identity being performed due to gate errors. This is repeated with
@@ -397,7 +313,7 @@ resonant carrier coupling in the MS-interaction is suppressed.
     utilizing either standing or travelling waves. We obtained an
     error of $1.44(3) \times 10^{-3}$ and $1.73(3) \times 10^{-3}$ per
     Clifford gate for the SW and travelling single-qubit gates,
-    respectively. Thus, use of the SW, and the added experimental
+    respectively, seen in Figure~\ref{fig:cnull}~(b). Thus, use of the SW, and the added experimental
     complexity it entails, is not detrimental to single-qubit gate
     fidelity. Due to spin dephasing of our quadrupole qubit
     originating from laser noise, external field noise and the natural
@@ -475,7 +391,7 @@ resonant carrier coupling in the MS-interaction is suppressed.
     %% both the red- and the blue-detuned SWs [26] and observe that the
     %% interaction magnitude [34] increases linearly with Ω (Fig. 3).\\
 
-\subsection{Standing wave Molmer-Sorensen}
+\subsection{Standing wave M\o lmer-S\o rensen}
 
     To explore two-qubit entangling gates we implement an MS-type scheme
     with a bichromatic SW and compare with the conventional
@@ -562,63 +478,30 @@ where the proof-of-principle fast gate schemes have been tested[ref
 fast entanglement.
 
 
-\begin{table}[h!]
-\begin{center}
-\begin{tabular}{ c|c c c c }
-  Trap & $d$ / $\mu$m & $\omega_{ax}, \omega_{rad}$ / ($2\pi$MHz) & $\dot{\bar{n}} / qs^{-1}$ & Trap depth / meV \\ 
-  \hline
-  Blade  & 500 & 1.9, 4 & 75 & 1000 \\
-  HOA2  & 68 & 1.8, 2.5 & 2000 & 150 \\
-  NPL  & 250 & ~1.6*, 5.0* & <100~ & ~400* 
-\end{tabular}
-\caption{Comparison of different trap types at typical operating
-  parameters. Blade is a macro blade style trap, HOA2 is a surface
-  style trap, and NPL is a microfabricated 3D trap. $d$ is the
-  ion-electrode distance, $\omega$ are the motional mode frequencies
-  for one ion, and $\dot{\bar{n}}$ is the heating rate in quanta per
-  second. NPL starred values are from simulation. Values for Blade and
-  HOA2 came from [Vera, Amy Thesiss] and [DPN, Beth Thesiss]
-  respectively. }
-
-%% Characterization of a High-Optical-Access surface trap optimized for quantum information processing Peter Maunz, Craig R. Clark, Raymond Haltli, Andrew Hollowell, Jonathan Mizrahi, John Rembetski, Paul Resnick, Jonathan D. Sterk, Daniel L. Stick, Boyan Tabakov, and Matthew G. Blain Sandia National Laboratories  
-\end{center}
-\label{table:trap}
-\end{table}
-
-\begin{figure}
-  \begin{center}
-   \noindent\includegraphics[width=\linewidth]{figures/trap_comp.png}
-  \end{center}
-  \caption{\textbf{a)} Blade trap used for carrier nulling results. In
-    blue are the RF blades providing the radial pseudopotential whilst
-    in red are the DC end caps providing the axial
-    potential. \textbf{b)} NPL trap being used in the FastGates
-    experiment. This is a microfabricated, segmented, multilayer
-    trap. \textbf{c)} A cross sectional view of the NPL trap showing
-    the RF and DC electrode positions.
-    Figures from [S. R. Woodrow]
-    %%     Linear Paul trap design for high-fidelity ,
-    %% scalable quantum information processing. Master’s thesis, University
-    %% of Oxford, 2015
-    and [K. Choonee].
-    %%   G. Wilpers, and A. G. Sinclair,
-    %% ‘Silicon microfabricated linear segmented ion traps for quantum
-    %% technologies’, in 2017 19th International Conference on Solid-State
-    %% Sensors, Actuators and Microsystems (TRANSDUCERS), Jun. 2017,
-    %% pp. 615–618. doi: 10.1109/TRANSDUCERS.2017.7994124.
-  }
-
-  \label{fig:trap}
-\end{figure}
 
 \subsection{Ion}
+\begin{figure}
+  \begin{center}
+   \noindent\includegraphics[width=0.4\linewidth]{figures/Ca40.pdf}
+  \end{center}
+  \caption{
+Electronic energy levels of \textsuperscript{40}Ca\textsuperscript{+},
+which will be used in the ``FastGates'' experiment. The levels are
+split by the Zeeman effect due to a $5$~G external magnetic field. The
+transitions marked are required for cooling and control over the
+ion. We shall use the optical-qubit with a quadrupole transition at
+729-nm.
+  }
+
+  \label{fig:ion}
+\end{figure}
 Singly-charged Group 2 elements are popular in ion trap
 experiments due to their single outer electron with Hydrogen-like
 energy levels. For ``FastGates'' we will use $^{40}$Ca$^+$.
 
 \textsuperscript{40}Ca\textsuperscript{+} has
 no nuclear spin giving the
-(relatively) simple level structure shown in Figure X. An external
+(relatively) simple level structure shown in Figure~\ref{fig:ion}. An external
 magnetic field of $5$~G is applied to split the levels via the Zeeman
 effect. The relevant laser transitions for our planned ion trap
 experiment have been marked.
@@ -642,13 +525,60 @@ strength than coils.
 %% shorten paragraph.
 
 The natural lifetime of the metastable 3D\textsubscript{5/2} is around
-$\tau =$~1.1~s XrefBarton, giving a favorable fundamental limit of coherence
+$\tau =$~1.1~s [refBarton], giving a favorable fundamental limit of coherence
 time for our chosen qubit.  This natural lifetime leads to a narrow
 4S\textsubscript{1/2} $\Leftrightarrow$ 3D\textsubscript{5/2}
 transition linewidth, $\Gamma = 1/\tau < 1$~Hz, and so demands the use of a
 narrow linewidth laser, which is discussed in the \textit{Laser
   systems} subsection.
 
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ c|c c c c }
+  Trap & $d$ / $\mu$m & $\omega_{ax}, \omega_{rad}$ / ($2\pi$MHz) & $\dot{\bar{n}} / qs^{-1}$ & Trap depth / meV \\ 
+  \hline
+  Blade  & 500 & 1.9, 4 & 75 & 1000 \\
+  HOA2  & 68 & 1.8, 2.5 & 2000 & 150 \\
+  NPL  & 250 & ~1.6*, 5.0* & <100~ & ~400* 
+\end{tabular}
+\caption{Comparison of different trap types at typical operating
+  parameters. Blade is a macro blade style trap, HOA2 is a surface
+  style trap, and NPL is a microfabricated 3D trap. $d$ is the
+  ion-electrode distance, $\omega$ are the motional mode frequencies
+  for one ion, and $\dot{\bar{n}}$ is the heating rate in quanta per
+  second. NPL starred values are from simulation. Values for Blade and
+  HOA2 came from [Vera, Amy Thesiss] and [DPN, Beth Thesiss]
+  respectively. }
+\label{table:trap}
+
+%% Characterization of a High-Optical-Access surface trap optimized for quantum information processing Peter Maunz, Craig R. Clark, Raymond Haltli, Andrew Hollowell, Jonathan Mizrahi, John Rembetski, Paul Resnick, Jonathan D. Sterk, Daniel L. Stick, Boyan Tabakov, and Matthew G. Blain Sandia National Laboratories  
+\end{center}
+\end{table}
+
+\begin{figure}
+  \begin{center}
+   \noindent\includegraphics[width=\linewidth]{figures/trap_comp.png}
+  \end{center}
+  \caption{\textbf{a)} The blade trap used for the carrier nulling proof-of-principle experiment. In
+    blue are the RF blades providing the radial pseudopotential whilst
+    in red are the DC end caps providing the axial
+    potential. \textbf{b)} The NPL trap to be used in the ``FastGates''
+    experiment. This is a microfabricated, segmented, multilayer
+    trap. \textbf{c)} A cross sectional view of the NPL trap showing
+    the RF and DC electrode positions.
+    Figures from [S. R. Woodrow]
+    %%     Linear Paul trap design for high-fidelity ,
+    %% scalable quantum information processing. Master’s thesis, University
+    %% of Oxford, 2015
+    and [K. Choonee].
+    %%   G. Wilpers, and A. G. Sinclair,
+    %% ‘Silicon microfabricated linear segmented ion traps for quantum
+    %% technologies’, in 2017 19th International Conference on Solid-State
+    %% Sensors, Actuators and Microsystems (TRANSDUCERS), Jun. 2017,
+    %% pp. 615–618. doi: 10.1109/TRANSDUCERS.2017.7994124.
+
+  \label{fig:trap}}
+\end{figure}
 
 \subsection{Trap}
 %% As mentioned in section 1, the overall system we desire is an internal electronic state of the ion coupled to its motion.
@@ -715,7 +645,7 @@ We aim for an axial ion
 separation of around $5$~$\mu$m which, for $^{40}Ca^{+}$ ions means a
 trapping potential of $\omega_z \approx 2\pi \cdot 1.6$~MHz. This ion
 separation was chosen to reduce the cross talk between ions when
-singly addressed (see section X).\\
+singly addressed (see section 3.5).\\
 We are targeting approximately $5$~MHz for our radial frequencies, as
 we shall use radial addressing for two-qubit entangling gates. The choice
 of this higher frequency is motivated by several factors. The Doppler
@@ -728,16 +658,22 @@ greater frequency separation of radial modes in a multi-ion crystal,
 which allow for greater selectivity of participating modes. \\
 Using the pseudopotential approximation for the confining field, we can find a
 trapping frequency in one radial direction $\omega_p$
-$$\omega_p = \frac{e\alpha V_{RF}}{\sqrt{2}\Omega_{RF}M\rho^2},$$
+\begin{equation}
+\omega_p = \frac{e\alpha V_{RF}}{\sqrt{2}\Omega_{RF}M\rho^2},
+\end{equation}
 where $\alpha$ is a factor of order unity given by the geometry of the trap, $V_{RF}$ and $\Omega_{RF}$ are the voltage and frequency provided to the RF-electrode, $M$ is the mass of the ion, and $\rho$ is the ion-RF electrode separation.
 Applying some DC voltage on the axial electrodes leads to axial confinement with frequency $\omega_{ax}$, but must defocus the radial confinements as the total curvature of the pseudopotential must remain constant,
-$$\omega_{rad} = \sqrt{\omega_p^2 - \omega_{ax}^2/2}.$$
+\begin{equation}
+\omega_{rad} = \sqrt{\omega_p^2 - \omega_{ax}^2/2}.
+\end{equation}
 Unlike the macroscopic blade trap, the NPL trap focuses one of
 the radial modes and defocuses the other when the DC electrodes are
 increased due to the ``cross'' arrangement of DC and RF electrodes,
 Figure~\ref{fig:trap}~(c),
-$$\omega_{rad\pm} = \sqrt{\omega_p^2 - (1\mp\beta)\omega_{ax}^2/2},$$
-where $\beta$ is some factor due to the geometry of this cross arrangement. From simulation $\beta > 1$ for $\Omega_{RF} = 2\pi\cdot 23$~MHz and $V_{RF} = 200$~V and so one radial mode increases with DC voltage applied and one decreases as can be seen in figureX.
+\begin{equation}
+\omega_{rad\pm} = \sqrt{\omega_p^2 - (1\mp\beta)\omega_{ax}^2/2},
+\end{equation}
+where $\beta$ is some factor due to the geometry of this cross arrangement. From simulation $\beta > 1$ for $\Omega_{RF} = 2\pi\cdot 23$~MHz and $V_{RF} = 200$~V and so one radial mode increases with DC voltage applied and one decreases.
 \begin{table}[h!]
 \begin{center}
 \begin{tabular}{ c|c c c c c }
@@ -748,9 +684,8 @@ where $\beta$ is some factor due to the geometry of this cross arrangement. From
   Loading  & 100 & -2 &  23 & 0.8 \quad 2.0 & 0.25 \\
 \end{tabular}
 \caption{ Simulated parameters for both ``Experiment'' and ``Loading'' settings \textsuperscript{40}Ca\textsuperscript{+} with the NPL trap.
-  }
+\label{table:freqs}}
 \end{center}
-\label{table:freqs}
 \end{table}
 A possible set of parameters to achieve $\omega_{ax} = 2\pi \cdot
 1.6$~MHz and $\omega_{rad+} = 2\pi \cdot 4.9$~MHz can be seen on the
@@ -770,14 +705,14 @@ frequencies.
   \begin{center}
    \noindent\includegraphics[width=\linewidth]{figures/729_path_small.pdf}
   \end{center}
-  \caption{729-nm system}
+  \caption{The 729-nm system being constructed for use in the ``FastGates'' experiment. A Ti:Saph laser tuned to 729-nm is pumped by a 532-nm source. Light is picked off at the first beam sampler to stabilise by PDH locking to a cavity.}
   \label{fig:729}
 \end{figure}
 
 Lasers are a key tool for creating the highly localised, strong
 electric field amplitudes and gradients needed to drive both carrier
 and sideband transitions of the trapped ion.\\
-As shown in FigureX we will use the levels
+As shown in Figure~\ref{fig:ion}, we will use the levels
 4S\textsubscript{1/2} to 3D\textsubscript{5/2} with a 729-nm
 quadrupole transition to define our qubit. Therefore the 729-nm laser
 is used to implement single- and multi-qubit gates. We also use this
@@ -843,7 +778,10 @@ the fibre we implement fibre noise cancellation[ref].
   \begin{center}
    \noindent\includegraphics[width=\linewidth]{figures/vacuum_can.pdf}
   \end{center}
-  \caption{Vacuum can}
+  \caption{
+    \textbf{a)} A schematic of the ``FastGates'' vacuum chamber. Wavelengths apart from 729-nm enter through the side CF40 viewports and are directed onto the ions by in vacuum prisms. The 729-nm light enters through the larger CF100 viewports.
+    \textbf{b)} A photograph of the assembled system prior to baking.
+  }
   \label{fig:can}
 \end{figure}
 
@@ -884,7 +822,7 @@ within close proximity of the trap chip.
   \begin{center}
    \noindent\includegraphics[width=\linewidth]{figures/vac_can_AOD_small.pdf}
   \end{center}
-  \caption{Single addressing system}
+  \caption{The standing wave single addressing system. Dual high NA objectives focus the light to a tight waist at the ions location. AODs are used to steer the light to only selected ions. The left hand side of the figure shows the Gaussian profile of the light, whilst the right hand side shows a ray representation of how two singly addressing spots are formed at the ions. L1 is a telecentric scanning lens and in combination with L2 form a beam expander.}
   \label{fig:AOD}
 \end{figure}
 
@@ -935,7 +873,7 @@ standing wave.\\
 %Conclusion {{{
 \section{Conclusion}
 We presented experimental results for using standing waves to
-implement Molmer-Sorensen entangling gates where errors due to the
+implement M\o lmer-S\o rensen entangling gates where errors due to the
 carrier term are suppressed. These experiments were conducted using a
 previous apparatus, which served as a platform for proof-of-principle
 work. However, this setup has inherent limitations related to gate
@@ -967,7 +905,7 @@ system we will benchmark the fidelity of single-qubit gates by
 globally addressing a single ion.
 
 Once the system has an acceptable single-qubit error
-(~$1\times10^{-3}$), we will be ready to assemble the single ion
+($\approx 1\times10^{-3}$), we will be ready to assemble the single ion
 addressing system described above. Standing wave single ion addressing
 on multi-ion chains would likely be a suitable topic for a technical
 paper on methods and to report on crosstalks and gate fidelities.
@@ -981,6 +919,18 @@ multi-ion chain.
 
 \vspace{2em}
 \hrule
+%}}}
+
+%Appendix{{{
+\section{Appendix}
+\begin{figure}[!h]
+  \begin{center}
+   \noindent\includegraphics[width=0.6\linewidth]{figures/Figure_2_v3.pdf}
+  \end{center}
+  \caption{Single qubit gates using a standing wave (SW) for a quadrupole transition. The phase of the SW at the ion is given by $\Delta\phi$. $\Delta\phi = 0$ corresponds to an E field antinode whilst $\pi$ corresponds to a node. Carrier coupling is maximised at the node (max gradient) and suppressed at the antinode. Figure from~\cite{saner2023}.}
+
+  \label{fig:app1}
+\end{figure}
 %}}}
   
 \end{document}

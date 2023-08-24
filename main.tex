@@ -477,9 +477,9 @@ resonant carrier coupling in the MS-interaction is suppressed.
 
 \subsection{Standing wave Molmer-Sorensen}
 
-    To explore two-qubit entangling gates we implemented an MS-type scheme
-    with a bichromatic SW instead of the conventional
-    bichromatic TW. The bichromatic field is created by applying two
+    To explore two-qubit entangling gates we implement an MS-type scheme
+    with a bichromatic SW and compare with the conventional
+    bichromatic travelling wave (TW). The bichromatic field is created by applying two
     tones to the AOMs in Figure~\ref{fig:cnull}~(a). As with the TW MS-scheme, these
     tones are symmetrically detuned by $\delta \approx \pm(\omega_z + \delta_g) $ from the
     qubit resonance. Here $\omega_z$ 
@@ -488,30 +488,36 @@ resonant carrier coupling in the MS-interaction is suppressed.
     from these sidebands. To selectively couple to the sidebands, and
     hence suppress the carrier term, the ion spacing is adjusted to
     place them both on antinodes of the bichromatic SWs.\\
-    We performed TW and SW two-qubit entangling gates on the axial
-    in-phase mode and optimize the experimental parameters to maximize
-    the Bell-state fidelity for a fixed gate duration. In both cases,
-    we use a ramp duration of 10 $\mu$s to minimize coupling to the other
-    motional modes [33]. In Figure~\ref{fig:cnull}~(c), we show the two-qubit fidelities
+    %% We performed TW and SW two-qubit entangling gates on the axial
+    %% in-phase mode and optimize the experimental parameters to maximize
+    %% the Bell-state fidelity for a fixed gate duration.
+    %% In both cases,
+    %% we use a ramp duration of 10 $\mu$s to minimize coupling to the other
+    %% motional modes [33].
+    In Figure~\ref{fig:cnull}~(c), we show the two-qubit fidelities
     achieved with the two schemes as a function of the effective gate
-    duration ($2\pi/\delta_g$, where $\delta_g = \delta - \omega_z$) [37]. For slower gates,
-    the fidelity of the SW-MS is comparable with that of the
-    TW-MS. For faster entangling gates, the fidelity of the TW-MS
-    degrades rapidly as expected due to the carriers presence. In contrast, the fidelity for the SW-MS is
-    consistent with $\approx 0.95$ over the entire available power range,
-    showing that we have eliminated the limit arising from the carrier
-    coupling. The shortest SW-MS gate was 15 $\mu$s, limited by the
-    available total power of 29 mW. \\
-
-    As gate duration is inversely proportional to Rabi frequency, we
-    can further push the speed of these gates using greater
-    intensities of light at the ions. This can be achieved by more
-    powerful lasers or by focusing the beams down to tighter waists at
-    the ions locations. To explore these faster gates a new apparatus
-    has been designed and is being constructed that will feature both
-    these improvements and will allow exploration of these gates in
-    many ion crystals. A description and progress report of this
-    system is described in the following section.\\
+    duration ($2\pi/\delta_g$, where $\delta_g = \delta - \omega_z$)
+    [37]. For slower gates, the fidelity of the SW-MS is comparable
+    with that of the TW-MS. For faster entangling gates, the fidelity
+    of the TW-MS degrades rapidly as expected due to the carriers
+    presence. In contrast, the fidelity for the SW-MS is consistent
+    with $\approx 0.95$ over the entire available power range, showing
+    that we have eliminated the limit arising from the carrier
+    coupling. The shortest SW-MS gate was 15 $\mu$s, limited by the achievable
+    intensity of light at the ion in this ion-trap apparatus.\\
+    As gate duration is inversely proportional to the required Rabi
+    frequency to complete an entangling gate, we can further increase the
+    speed of these gates using greater intensities of light at the
+    ions. This can be achieved by more powerful lasers or by focusing
+    the beams down to tighter waists at the ions locations. The
+    current apparatus is limited to global addressing with a large
+    waist beam and the laser power at 674-nm cannot be practically
+    increased. Therefore, to explore these faster gates a new
+    apparatus has been designed and is being constructed with the
+    ability to create tight waist standing waves at the ion
+    position. Further, a state-of-the-art trap allows exploration of
+    these gates in many ion crystals. A description and progress
+    report of this system is described in the following section.\\
 
     %% In conclusion, we implemented single- and two-qubit operations for
     %% trapped-ion qubits using a phase-stabilized SW. Two

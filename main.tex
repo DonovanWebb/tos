@@ -2,6 +2,18 @@
 \documentclass[12pt]{iopart}
 \usepackage{graphicx}
 \usepackage{iopams}
+%\usepackage[doi=false,isbn=false,url=false,eprint=false, backend=biber, style=phys]{biblatex}
+\usepackage[
+    backend=biber,
+    style=nature,
+    url=false, 
+    doi=false,
+    eprint=false
+]{biblatex}
+\addbibresource{ref.bib}
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryBibitem{\clearfield{issn}}
+\AtEveryBibitem{\clearfield{isbn}}
 
 % Fixing iopams poor centering of equations:
 \expandafter\let\csname equation*\endcsname\relax
@@ -75,9 +87,9 @@ Noisy intermediate scale QC (NISQ)~\cite{preskill_quantum_2018}, an alternative 
 correted QC, is only practical when individual gate fidelities (1 -
 gate errors) are sufficiently low.  The ion trap platform is a leading
 candidate for NISQ with state-of-the-art fidelities
-for both single- and two-qubit gates~\cite{srinivas_high_2021, ballance_high_2016, harty_high_2014}.  Entangling gates
+for both single- and two-qubit gates~\cite{srinivas_high-fidelity_2021, ballance_high-fidelity_2016, harty_high-fidelity_2014}.  Entangling gates
 are a neccessity for universal QC~\cite{divincenzo_physical_2000, blatt_entangled_2008}, and also have applications in
-enhanced sensing and metrology~\cite{ono_entanglement_2013, nichols_elementary_2022}.  However
+enhanced sensing and metrology~\cite{ono_entanglement-enhanced_2013, nichol_elementary_2022}.  However
 the relatively long two-qubit entangling durations in ion traps limits
 both the fidelity of two qubit gates, and the overall circuit
 depth of an algorithm possible with a ``wall clock'' time below
@@ -234,7 +246,7 @@ resonant carrier coupling in the MS-interaction is suppressed.
     Here, we report experimental results of both standing wave (SW)
     single-qubit gates and SW M\o lmer-S\o rensen
     entangling gates with the carrier term suppressed~\cite{saner_breaking_2023}.\\
-    These experiments were performed on our ``Blade'' apparatus~\cite{shafer_fast_2020, thirumalai_high_2019} which,
+    These experiments were performed on our ``Blade'' apparatus~\cite{schafer_fast_2020, thirumalai_high-fidelity_2019} which,
     although suitable for this proof-of-principle work, has hard
     limitations on what gate durations can be achieved due to
     available laser power and only global addressing of the ions.
@@ -484,7 +496,7 @@ control and readout.\\
 %% As with all ventures in experimental physics, as technologies mature, so
 %% too do the capabilities and scope of our apparatus.
 Here we describe both the older generation apparatus, referred to as ``Blade'',
-where the proof-of-principle fast gate schemes have been tested~\cite{saner_breaking_2023, shafer_fast_2018}, and the new proposed system known as
+where the proof-of-principle fast gate schemes have been tested~\cite{saner_breaking_2023, schafer_fast_2018}, and the new proposed system known as
 ``FastGates'', which solves critical limitations for further exploring
 fast entanglement.
 
@@ -558,7 +570,7 @@ narrow linewidth laser, which is discussed in the \textit{Laser
   ion-electrode distance, $\omega$ are the motional mode frequencies
   for one ion, and $\dot{\bar{n}}$ is the heating rate in quanta per
   second. NPL starred values are from simulation. Values for Blade and
-  HOA2 came from~\cite{shafer_fast_2020, hughes_benchmarking_2021} and~\cite{nadlinger_device_2023, nichols_thesis_2023}
+  HOA2 came from~\cite{schafer_fast_2020, hughes_benchmarking_2021} and~\cite{nadlinger_device-independent_2022, nichol_thesis_2022}
   respectively. }
 \label{table:trap}
 
@@ -621,7 +633,7 @@ is $0.5$~mm. Typical operating frequency for the RF electrodes of the
 ``Blade'' trap are $28.0133$ MHz leading to an axial ion frequency of
 $1.860$ MHz and radial frequencies of $4.077$ MHz and $4.341$
 MHz.\\ Recently, the surface style linear Paul trap has gained
-popularity due to the maturity of chip fabrication technologies~\cite{allcock_surface_2011}
+popularity due to the maturity of chip fabrication technologies~\cite{allcock_surface-electrode_2011}
 and the potential route to scalability this offers. In the surface
 trap, the 3D blade and endcap geometry of the ``macro'' trap is
 effectively projected onto a 2D surface. The stable point of such a
@@ -824,7 +836,7 @@ surrounding the vacuum system with electromagnetic shielding. Inside
 the vacuum system we aim for a residual pressure of less than
 $10^{-11}$ mbar. To reach this pressure, we must take care in material
 choice and thoroughly clean and bake all material within the vacuum
-system (a useful summary of tactics can be found in~\cite{birnbaum_ultra-high_2005, wolf_cryogenic_2015}).
+system (a useful summary of tactics can be found in~\cite{birnbaum_ultra-high_2005, wolf_cryogenic_2019}).
 
 A schematic and photograph of the vacuum system can be seen in
 Figure~\ref{fig:can}. The system consists of an octagonal experimental
@@ -886,7 +898,7 @@ non-gaussian and increase the cross talk seen at the neighbouring
 ions. Therefore care is taken in the optical design.
 
 To illuminate selected ions we steer an input beam using
-Acousto-Optical-Deflectors (AODs)~\cite{nagourney_quantum_2014, li_low_2023, pogorelov_compact_2021}, where the
+Acousto-Optical-Deflectors (AODs)~\cite{nagourney_quantum_2014, li_low-crosstalk_2023, pogorelov_compact_2021}, where the
 angle deflected is
 proportional to the drive frequency supplied to the AOD. Multiple
 output beams can be formed by supplying multiple RF tones to the AOD.
@@ -960,7 +972,11 @@ multi-ion chain.
 \vspace{2em}
 \hrule
 %}}}
+\clearpage
 
+\printbibliography
+
+\clearpage
 %Appendix{{{
 \section{Appendix}
 \begin{figure}[!h]
@@ -977,10 +993,6 @@ multi-ion chain.
   \label{fig:app1}
 \end{figure}
 %}}}
-
-\hfill \break
-\bibliographystyle{apsrev4-2}
-\bibliography{bibliography}
 
 
 \end{document}

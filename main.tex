@@ -38,11 +38,11 @@ University of Oxford}
     Scalable trapped-ion quantum computation relies on the development
     of high-fidelity fast entangling gates in many-ion crystals.
     %
-    Currently the speed of M\o lmer-S\o rensen entangling gates is limited
+    The speed of travelling wave M\o lmer-S\o rensen entangling gates is limited
     by off-resonant carrier excitations which do not commute with the
     neccessary sideband excitations.
     %
-    Standing waves formed by counter-propogating lasers offer a
+    Standing waves formed by counter-propogating beams offer a
     potential pathway to achieve fast entanglement by suppressing
     undesired carrier excitations.
     %
@@ -53,11 +53,11 @@ University of Oxford}
     limit'' imposed by non-commuting off-resonant carrier excitations.
     %
     To explore entangling operations at durations comparable to the
-    secular trap frequency we require high intensity laser
-    addressing. A new system is being constructed featuring standing
+    secular trap frequency, we require high light intensity at the ions.
+    A new system is being constructed featuring standing
     wave single ion addressing to generate these high intensities.  It
     will also utilize a microfabricated, segmented 3D Paul trap for
-    greater control of long ion chains. We will use
+    greater control of long ion chains. We will work with
     \textsuperscript{40}Ca\textsuperscript{+} which has a quadrupole
     transition at $729$-nm. We present the current progress and
     roadmap of this next-generation platform and motivations behind
@@ -83,19 +83,16 @@ due to noise and decoherence of the physical qubits are inevitable and
 limit algorithm circuit depths. With error correction~\cite{steane_overhead_2003} schemes
 this depth can be greatly extended but requires a large overhead of qubits
 and operations, which at current scales is not practical.
-Noisy intermediate scale QC (NISQ)~\cite{preskill_quantum_2018}, an alternative to error
-correted QC, is only practical when individual gate fidelities (1 -
-gate errors) are sufficiently low.  The ion trap platform is a leading
+Noisy intermediate scale QC (NISQ)~\cite{preskill_quantum_2018}, a transitional goal before the scales required for fault tolerance are achieved, is still only practical when individual gate fidelities (1 -
+gate errors) are sufficiently high.  The ion trap platform is a leading
 candidate for NISQ with state-of-the-art fidelities
 for both single- and two-qubit gates~\cite{srinivas_high-fidelity_2021, ballance_high-fidelity_2016, harty_high-fidelity_2014}.  Entangling gates
 are a neccessity for universal QC~\cite{divincenzo_physical_2000, blatt_entangled_2008}, and also have applications in
-enhanced sensing and metrology~\cite{ono_entanglement-enhanced_2013, nichol_elementary_2022}.  However
-the relatively long two-qubit entangling durations in ion traps limits
-both the fidelity of two qubit gates, and the overall circuit
-depth of an algorithm possible with a ``wall clock'' time below
-$\tau_0$, the qubit coherence time.\\
+enhanced sensing and metrology~\cite{ono_entanglement-enhanced_2013, nichol_elementary_2022}.
+However the relatively long two-qubit entangling durations in ion
+traps set an ultimate limit to the fidelity of two-qubit gates.\\
 Here, we shall discuss a possible route to fast two-qubit entangling
-gates, report on initial results from a proof of principle experiment,
+gates, report on results from a proof-of-principle experiment,
 and describe a new ion trap apparatus being constructed tailored for
 exploring entanglement on the timescale of the ion motion.\\
 
@@ -125,33 +122,35 @@ exploring entanglement on the timescale of the ion motion.\\
   %% Both single and multi-qubit entangling gates are required for
   %%   universal QC [DiVen].
 Two electronic energy levels within the ion are used to define our
-qubit spin states while the trapping potential leads to multiple
-motional (Fock) states of the ion crystal~\cite{wineland_experimental_1998}. To entangle the
-spins of two ions within the crystal we may use these common modes
+qubit spin states while the harmonic potential leads to multiple
+bosonic modes of motion of the ion crystal~\cite{wineland_experimental_1998}. To entangle the
+spins of two ions within the crystal we may use these shared modes
 of motion as a quantum information bus. This is achieved by a spin
-dependent coupling of the ion's spin with a motional mode of the
-crystal.
-The duration of this applied spin dependent force is set so the
-motion returns to the original Fock state and the spin states
+dependent coupling of each ion with their shared motion.
+The duration of this applied spin dependent force is set such that the
+motion returns to its original state and the spin states
 acquire different phases, effectively transferring from
 spin-motion to spin-spin entanglement. One such implementation of
 this method, the M\o lmer-S\o rensen gate (MS-gate)~\cite{sorensen_entanglement_2000}, uses a
 travelling bichromatic field of either lasers or microwaves
 detuned symmetrically from the qubit (carrier) resonance.
-The two fields off resonantly drive this motion (sideband
-transitions), to create a spin dependent force. XXnote on fastgates ~\cite{schafer_fast_2018, schafer_fast_2020}XX. However, also
-present in the MS-interaction is off resonant driving of the
-carrier transition. This unwanted carrier term becomes the
+The two fields off-resonantly drive this motion (sideband
+transitions), to create a spin dependent force (SDF).
+The MS-gate durations may be decreased by increasing the coupling
+strength of the spin and motional mode. However, at high coupling strengths, the adiabatic
+approximation may no longer be used as multiple motional modes begin
+to participate during the gate~\cite{schafer_fast_2018, schafer_fast_2020}.
+Furthermore, in the MS-interaction, the off-resonant driving of the
+carrier transition becomes the
 leading source of error at short gate durations~\cite{saner_breaking_2023}. To overcome
-this limitation we may use a standing bichromatic field to
-suppress the off resonant driving of the carrier. The carrier
+this limitation we may use a standing wave bichromatic field to
+suppress the off-resonant driving of the carrier. The carrier
 interaction in an electronic quadrupole transition couples to the
 gradient of the E field, whilst the sideband couples to the
-curvature. The use of a standing wave phase stabilised with
+curvature of the field. The use of a standing wave phase stabilised with
 respect to the ion gives a positional dependence of both the
 gradient and curvature of the electric field. If the ions are
-placed at a point in the standing wave of zero gradient, the off
-resonant carrier coupling in the MS-interaction is suppressed.
+placed at a point in the standing wave of zero gradient, the off-resonant carrier coupling in the MS-interaction is suppressed, while the motional coupling is maximised.
 %% \begin{itemize}
 %% \item Expand this Hamiltonian to see coupling to E field and gradient of E field.
 %% \item Describe two possible break down at faster speeds:
@@ -209,7 +208,7 @@ resonant carrier coupling in the MS-interaction is suppressed.
 
     %% It can be shown that a travelling wave MS in the interaction picture obeys
     %% equation 4 of paper, where the SDF follows a bessel like
-    %% relationship as shown in fig X, featuring a global maximum
+    %% relationship as shown in fig , featuring a global maximum
     %% achievable force amplitude. This maximum point direclty limits the
     %% speed at which gates can be achieved.\\
 
@@ -229,10 +228,10 @@ resonant carrier coupling in the MS-interaction is suppressed.
     standing wave at the ions. Incoming 674-nm light is split into two
     branches, $b1$ and $b2$. AOMs control the frequency and phase of
     these two branches. The light is directed onto the $^{88}$Sr$^+$
-    ions at an angle of $45^\circ.$ Picked off light from both
+    ions at an angle of $45^\circ.$ We pick off light from both
     branches interfere at a photodetector (PD) and an error signal is
     generated to phase stabilise the standing wave.  \textbf{b)}
-    Single qubit random bench marking results for both travelling and
+    Single qubit random benchmarking results for both travelling and
     standing waves. A decay model (solid line) is fitted to find both
     state-prep and Clifford gate errors.  \textbf{c)} The fidelity of
     MS entangling gates as gate duration is reduced. It can be seen
@@ -298,7 +297,7 @@ resonant carrier coupling in the MS-interaction is suppressed.
     %% the SW, we can realise any ratio between carrier and sideband
     %% coupling.\\
 
-\subsection{Random Benchmarking}
+\subsection{Randomized Benchmarking}
 
     High fidelity unitary operations (gates) are essential for both
     near intermediate scale quantum computing and for reducing
@@ -337,7 +336,7 @@ resonant carrier coupling in the MS-interaction is suppressed.
     the SW and travelling single-qubit gates, respectively, seen in
     Figure~\ref{fig:cnull}~(b). Thus, use of the SW, and the added
     experimental complexity it entails, is not detrimental to
-    single-qubit gate fidelity. Due to spin dephasing of our
+    the single-qubit gate fidelity. Due to spin dephasing of our
     quadrupole qubit originating from laser noise, external field
     noise and the natural lifetime of the transition, we took care to
     ensure that the duty cycle and Rabi frequency of both SW and
@@ -425,8 +424,8 @@ resonant carrier coupling in the MS-interaction is suppressed.
     our trapped single ion, $\omega_z = 2\pi\times 1.2$~MHz, and
     $\delta_g$ is some further detuning from these sidebands. To
     selectively couple to the sidebands, and hence suppress the
-    carrier term, the ion spacing is adjusted to place them both on
-    antinodes of the bichromatic SWs.\\
+    carrier term, the ion spacing is adjusted to place them both at
+    antinodes of the blue and red detuned SWs respectively.\\
     %% We performed TW and SW two-qubit entangling gates on the axial
     %% in-phase mode and optimize the experimental parameters to maximize
     %% the Bell-state fidelity for a fixed gate duration.
@@ -439,25 +438,25 @@ resonant carrier coupling in the MS-interaction is suppressed.
     $\delta_g = \delta - \omega_z$). For slower gates, the fidelity of
     the SW-MS is comparable with that of the TW-MS. For faster
     entangling gates, the fidelity of the TW-MS degrades rapidly as
-    expected due to the carriers presence. In contrast, the fidelity
+    expected due to the presence of the carrier. In contrast, the fidelity
     for the SW-MS is consistent with $\approx 0.95$ over the entire
     available power range, showing that we have eliminated the limit
-    arising from the carrier coupling. The shortest SW-MS gate was 15
-    $\mu$s, limited by the achievable intensity of light at the ion in
-    this ion-trap apparatus.\\ As gate duration is inversely
-    proportional to the required Rabi frequency to complete an
-    entangling gate, we can further increase the speed of these gates
-    using greater intensities of light at the ions. This can be
-    achieved by more powerful lasers or by focusing the beams down to
-    tighter waists at the ions locations. The current apparatus is
-    limited to global addressing with a large waist beam and the laser
-    power at 674-nm cannot be practically increased. Therefore, to
-    explore these faster gates a new apparatus has been designed and
-    is being constructed with the ability to create tight waist
-    standing waves at the ion position. Further, a state-of-the-art
-    trap allows exploration of these gates in many ion crystals. A
-    description and progress report of this system is described in the
-    following section.\\
+    arising from the carrier coupling. This is the first demonstration of carrier-nulled entangling operations. The shortest SW-MS gate shown, being 15~$\mu$s, was limited by the achievable intensity of light at the ions in
+    this ion-trap apparatus. 
+    \\ With the carrier limitation removed, the gate duration is now
+    inversely proportional to the required Rabi frequency. We
+    therefore can further increase the speed of these gates using
+    greater intensities of light at the ions. This can be achieved by
+    more powerful lasers or by focusing the beams down to tighter
+    waists at the ions locations. The current apparatus is limited to
+    global addressing with a large waist beam and the laser power at
+    674-nm cannot be practically increased. Therefore, to explore
+    these faster gates a new apparatus has been designed and is being
+    constructed with the ability to create tight waist standing waves
+    at the ion position. Further, a state-of-the-art trap allows
+    exploration of these gates in many ion crystals. A description and
+    progress report of this system is described in the following
+    section.\\
 
     %% In conclusion, we implemented single- and two-qubit operations for
     %% trapped-ion qubits using a phase-stabilized SW. Two
@@ -486,6 +485,22 @@ resonant carrier coupling in the MS-interaction is suppressed.
 %Experimental Details {{{
 \section{Experimental Apparatus}
 
+\begin{figure}[ht]
+  \begin{center}
+   \noindent\includegraphics[width=0.4\linewidth]{figures/Ca40.pdf}
+  \end{center}
+  \caption{
+Electronic energy levels of \textsuperscript{40}Ca\textsuperscript{+},
+which will be used in the ``FastGates'' experiment. The levels are
+split by the Zeeman effect due to a $5$~G external magnetic field (they are shown explicitely only for the ground state). The
+transitions marked are required for cooling and control over the
+ion. We shall use the optical-qubit with a quadrupole transition at
+729-nm.
+  }
+
+  \label{fig:ion}
+\end{figure}
+
 The technical complexity of ion trapping experiments may be reduced to
 solving two problems: controlling the state of the ion (both internal
 and motional); and controlling the ion's surrounding environment.
@@ -501,23 +516,8 @@ where the proof-of-principle fast gate schemes have been tested~\cite{saner_brea
 fast entanglement.
 
 
-
 \subsection{Ion}
-\begin{figure}
-  \begin{center}
-   \noindent\includegraphics[width=0.4\linewidth]{figures/Ca40.pdf}
-  \end{center}
-  \caption{
-Electronic energy levels of \textsuperscript{40}Ca\textsuperscript{+},
-which will be used in the ``FastGates'' experiment. The levels are
-split by the Zeeman effect due to a $5$~G external magnetic field. The
-transitions marked are required for cooling and control over the
-ion. We shall use the optical-qubit with a quadrupole transition at
-729-nm.
-  }
 
-  \label{fig:ion}
-\end{figure}
 Singly-charged Group 2 elements are popular in ion trap
 experiments due to their single outer electron with Hydrogen-like
 energy levels. For ``FastGates'' we will use $^{40}$Ca$^+$.
@@ -527,7 +527,7 @@ no nuclear spin giving the
 (relatively) simple level structure shown in Figure~\ref{fig:ion}. An external
 magnetic field of $5$~G is applied to split the levels via the Zeeman
 effect. The relevant laser transitions for our planned ion trap
-experiment have been marked.
+experiment are indicated.
 
 A zero nuclear spin isotope of calcium was chosen due to this simple
 level structure without hyperfine splitting. The greater number of
@@ -544,7 +544,7 @@ strength than coils.
 
 %% The shielding
 %% was shown to suppress the background field by a factor of 500 at its
-%% center. XXHow does this effect noise affecting decoherence? and
+%% center. How does this effect noise affecting decoherence? and
 %% shorten paragraph.
 
 The natural lifetime of the metastable 3D\textsubscript{5/2} is around
@@ -570,7 +570,7 @@ narrow linewidth laser, which is discussed in the \textit{Laser
   ion-electrode distance, $\omega$ are the motional mode frequencies
   for one ion, and $\dot{\bar{n}}$ is the heating rate in quanta per
   second. NPL starred values are from simulation. Values for Blade and
-  HOA2 came from~\cite{schafer_fast_2020, hughes_benchmarking_2021} and~\cite{nadlinger_device-independent_2022, nichol_thesis_2022}
+  HOA2 are characterized in~\cite{schafer_fast_2020, hughes_benchmarking_2021} and~\cite{nadlinger_device-independent_2022, nichol_thesis_2022}
   respectively. }
 \label{table:trap}
 
@@ -646,7 +646,7 @@ geometry greatly reduces the depth of the trapping potential and the
 close proximity of the surface to the ion is a large contributor to
 anomalous heating~\cite{turchette_heating_2000}. Values for a widely used surface style trap,
 HOA2~\cite{maunz_high_2016}, are summarised in
-table~\ref{table:trap}.\\ A microfabricated 3D
+Table~\ref{table:trap}.\\ A microfabricated 3D
 trap~\cite{see_fabrication_2013, wilpers_monolithic_2012}, as will be
 used in the ``FastGates'' apparatus, brings together the advantages of
 chip fabrication as well as low heating rates and high trapping depths
@@ -668,7 +668,7 @@ and the heating rates have been shown to be $<
 %% typically assume $w_z$ < $w_x$, $w_y$ to allow a 1D ion crystal to
 %% lie along the axial direction of the trap.
 We aim for an axial ion separation of around $5$~$\mu$m which, for
-$^{40}Ca^{+}$ ions means a trapping potential of $\omega_z \approx
+$^{40}$Ca$^{+}$ ions means a trapping potential of $\omega_z \approx
 2\pi \cdot 1.6$~MHz. This ion separation was chosen to reduce the
 cross talk between ions when singly addressed (see section 3.5).\\ We
 are targeting approximately $5$~MHz for our radial frequencies, as we
@@ -716,20 +716,17 @@ voltage applied and one decreases.
   Experiment  & 200 & -7 &  23 & 1.6 \quad 4.9 & 0.61 \\
   Loading  & 100 & -2 &  23 & 0.8 \quad 2.0 & 0.25 \\
 \end{tabular}
-\caption{ Simulated parameters for both ``Experiment'' and ``Loading'' settings \textsuperscript{40}Ca\textsuperscript{+} with the NPL trap.
+\caption{ Simulated trapping parameters for both ``Experiment'' and ``Loading'' settings \textsuperscript{40}Ca\textsuperscript{+} with the NPL trap. The ``Experiment'' setting is optimized for high axial mode frequencies whilst the ``Loading'' setting maintains a lower q factor for practical loading. 
 \label{table:freqs}}
 \end{center}
 \end{table}
-A possible set of parameters to achieve $\omega_{ax} = 2\pi \cdot
-1.6$~MHz and $\omega_{rad+} = 2\pi \cdot 4.9$~MHz can be seen on the
-``Experiment'' trapping in table~\ref{table:freqs}.
+A possible set of parameters to achieve $\omega_{ax} = 2\pi \cdot 1.6$~MHz and $\omega_{rad+} = 2\pi \cdot 4.9$~MHz can be seen in the
+``Experiment'' trapping in Table~\ref{table:freqs}.
 
-XX remove XX
-From Mathiu
-equations, stable trapping exists for $q < 0.9$~\cite{berkeland_minimization_1998}, where
-$q=2\sqrt(2)\omega/\Omega_{RF}$, however convenient trapping of hot
-ions requires $q$ to be as low as possible.
-
+From the Mathieu
+equations, the areas of stability depend upon a factor $q$~\cite{berkeland_minimization_1998}, where
+$q=2\sqrt(2)\omega/\Omega_{RF}$. 
+Generally, we require $q$ to be as low ($q<0.3$) for convenient trapping.
 To satisfy this
 requirement a ``Loading'' setting (with parameters in
 table~\ref{table:freqs}) may be used with $q = 0.25$ and then the
@@ -741,7 +738,7 @@ frequencies.
 
 \begin{figure}
   \begin{center}
-   \noindent\includegraphics[width=\linewidth]{figures/729_path_small.pdf}
+   \noindent\includegraphics[width=0.9\linewidth]{figures/729_path_small.pdf}
   \end{center}
   \caption{The 729-nm system being constructed for use in the
     ``FastGates'' experiment. A Ti:Saph laser tuned to 729-nm is
@@ -763,19 +760,18 @@ bring the motional mode close to its ground state.
 This laser must be narrow linewidth ($\Gamma < 1$~Hz), and for fast
 gates we require large electric-field intensities at the ion to drive
 sideband transitions due to a low Lamb-Dicke factor for the 729-nm
-transition.  Pumped Ti:Saph laser systems have been shown to be
-both relatively high power and narrow linewidth, making them suitable
-for our experiment.
+transition.  Here we describe a system we are building consisting of a
+Pumped Ti:Saph laser system, which has been shown to be both
+relatively high power and narrow linewidth.
 
 We pump an M2 Solstis Ti:Saph with 15 W of 532-nm light from a Verdi
 system to produce around 4W of 729-nm light.  A schematic of the
 729-nm system being built is shown in Figure~\ref{fig:729}. The
 frequency is
 stabilized by the Pound-Drever-Hall (PDH) technique with a high
-finesse cavity. PDH locking requires taking the laser light and
-applying two sidebands via an electro-optical modulator (EOM). This
-phase modulated light is then directed onto a stable cavity and a
-reflected signal is directed onto a fast photodetector. The reflection
+finesse cavity. PDH locking requires 
+applying two sidebands via an electro-optical modulator (EOM) to the light and directing it onto a stable cavity. The
+light reflected from the cavity is then directed onto a fast photodetector. The reflection
 from the cavity consists of the interference between the carrier and
 the sidebands which have been respectively altered by the cavity
 transfer function. The photodetector signal is mixed down with the
@@ -812,12 +808,9 @@ the fibre we implement fibre noise cancellation.
 %% \item 854-nm and 866-nm - for repumping any lost population from the P to the D states.
 %% \end{itemize}
 
-
-\subsection{Inside the vacuum}
-
-\begin{figure}
+\begin{figure}[b]
   \begin{center}
-   \noindent\includegraphics[width=\linewidth]{figures/vacuum_can.pdf}
+   \noindent\includegraphics[width=0.9\linewidth]{figures/vacuum_can-crop.pdf}
   \end{center}
   \caption{
     \textbf{a)} A schematic of the ``FastGates'' vacuum
@@ -828,6 +821,8 @@ the fibre we implement fibre noise cancellation.
   }
   \label{fig:can}
 \end{figure}
+
+\subsection{Inside the vacuum}
 
 Here, we describe the instrumentation required, and being constructed,
 for decoupling the ion from any unwanted external environments. Our
@@ -846,7 +841,7 @@ optical access we have Dual CF100 viewports coated for 397-nm and
 729-nm, 854-nm and 866-nm.
 
 We use in vacuum prisms to direct light onto the ions located within
-the slit of the NPL trap as there is no visibility of the ions from
+the slit of the NPL trap as there is no direct line of sight to the ions from
 the side CF40 viewports and the high NA lens needed for single
 addressing obstructs the CF100 entry.
 
@@ -860,9 +855,7 @@ within close proximity of the trap chip.
 %% trap chip, the outer chip carrier, an interposer, and the filter PCB.
 
 
-\subsection{Single Addressing}
-
-\begin{figure}
+\begin{figure}[b]
   \begin{center}
    \noindent\includegraphics[width=\linewidth]{figures/vac_can_AOD_small.pdf}
   \end{center}
@@ -877,6 +870,8 @@ within close proximity of the trap chip.
   \label{fig:AOD}
 \end{figure}
 
+\subsection{Single Addressing}
+
 A unique feature of our system is the ability to produce standing wave
 single ion addressing. The design of this system is shown in
 Figure~\ref{fig:AOD}.  A single ion addressing system must be able to
@@ -886,12 +881,12 @@ selectivity, is the intensity of light due to the tight waist as the
 ion location. This high intensity will enable a greater SDF and thus
 faster gates.
 
-Our ions are separated by a distance $d\approx 5~\mu$m. For an ideal
+Our ions will be separated by a distance $d\approx 5~\mu$m. For an ideal
 Gaussian beam waist radius of the $\omega_0 = $1~$\mu$m, the Electric
 field intensity cross talk to a neighbouring ion will be
 $1\times 10^{-11}$. To produce this beam waist we must ensure we are not
 diffraction limited.  Focussing a collimated beam with an objective
-lens of 0.6 onto the ion provide $\omega_0 = 386$~nm for
+lens of NA = 0.6 onto the ion provide $\omega_0 = 386$~nm for
 $\lambda=$~729-nm light. The lens edges diffract the spots and
 abberations present in real optical components cause our spot to be
 non-gaussian and increase the cross talk seen at the neighbouring
@@ -915,8 +910,8 @@ This single addressing system is implemented on both sides of the UHV
 chamber to form counter-propogating beams at the ion location. AODs are
 an ideal choice for creating standing wave as the location the waist
 is formed along the ion chain can be finely tuned by varying the AOD RF
-drive. Furthermore, the phases of two beams formed by the AODs can be
-controlled independently by varying the phases of the respected RF
+drive frequency. Furthermore, the phases of two beams formed by the AODs can be
+controlled independently by varying the phases of the respective RF
 drives. This allows control over the phase of each singly addressed
 standing wave.\\
 
@@ -928,8 +923,8 @@ We presented experimental results for using standing waves to
 implement M\o lmer-S\o rensen entangling gates where errors due to the
 carrier term are suppressed. These experiments were conducted using a
 previous apparatus, which served as a platform for proof-of-principle
-work. However, this setup has inherent limitations related to gate
-duration due to laser power availability and the constraint of global
+work. However, this setup has inherent limitations related to the gate
+duration due to the laser power availability and the constraint of global
 ion addressing.
 Therefore, a new ion trap apparatus, with the unique capability of
 single ion addressing using standing waves, is described and design
@@ -941,7 +936,15 @@ realizing a useful NISQ device.
 
 %Outlook {{{
 \section{Outlook}
-We have fully assembled the trap chamber and it is ready to be placed
+Standing wave MS-gates are a new method of generating both high speed
+and high fidelity entangling operations. The method has promising
+scalability as the wavelength required (optical quadrupole
+transitions) are easily integrated into on-chip optics.
+The aim of my project is to explore these high speed gates and their
+viability in scaling to NISQ devices.
+
+To achieve this we require a new system as has been described above.
+Currently, we have fully assembled the trap chamber and it is ready to be placed
 in the trapping laboratory.  Beam paths for 397-nm, 854-nm, 866-nm and
 the PI system are completed.
 
@@ -960,9 +963,9 @@ Once the system has an acceptable single-qubit error
 ($\approx 1\times10^{-3}$), we will be ready to assemble the single ion
 addressing system described above. Standing wave single ion addressing
 on multi-ion chains would likely be a suitable topic for a technical
-paper on methods and to report on crosstalks and gate fidelities.
+paper on methods and to report on crosstalk and gate fidelities.
 
-Work would then transition to implementing carrier suppressed MS gates
+Work would then transition to implementing SW-MS gates
 on multi-ion crystals, replicating the results from the proof of
 principle experiments. Finally, the high intensity of light using the
 single addressing system will enable the exploration of entangling
